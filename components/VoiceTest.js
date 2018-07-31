@@ -9,16 +9,15 @@ import {
   AppRegistry,
   TouchableHighlight
 } from "react-native";
+// import jsdiff from "diff";
+var jsdiff = require("diff");
+console.log("1", jsdiff);
 
 import { Provider, Button, Card, Title, Paragraph } from "react-native-paper";
 
 import Voice from "react-native-voice";
 import CardContent from "../node_modules/react-native-paper/src/components/Card/CardContent";
 import CardCover from "../node_modules/react-native-paper/src/components/Card/CardCover";
-
-console.log("HAAAY", Voice);
-console.log("card cont", CardContent);
-console.log("card cov", CardCover);
 
 export default class VoiceTest extends Component {
   constructor(props) {
@@ -108,13 +107,32 @@ export default class VoiceTest extends Component {
       pitch: "",
       error: "",
       started: "",
-      results: ["Шест мышат в камышах шулшат."],
+      results: [],
       partialResults: [],
       end: ""
     });
-    // this.setState({ results: "Шест мышат в камышах шулшат" });
 
     try {
+      const or_poems = this.state.poems.map(poem => poem.text);
+      const original_poem = or_poems[2];
+      console.log(original_poem);
+      console.log(this.state.results[0]);
+      var diff = jsdiff.diffChars(original_poem, "Шест мышат в камышах шулшат");
+      var parts = [];
+      diff.forEach(function(part) {
+        console.log(part);
+        if (part.added) {
+          //green
+          console.log(part.value);
+        } else if (part.removed) {
+          //red
+          console.log(part.value);
+        }
+        parts.push(part.value);
+      });
+
+      console.log("JOINED: ", parts.join(""));
+
       await Voice.start("ru-RU");
     } catch (e) {
       console.error(e);
@@ -179,15 +197,14 @@ export default class VoiceTest extends Component {
       var matched = 0;
       var not_matched = 0;
       for (var i = 0; i < original_poem.length; ++i) {
-        console.log(or_words[i] + " vs. " + words[i]);
+        //console.log(or_words[i] + " vs. " + words[i]);
         if (or_words[i] != undefined && words[i] != undefined) {
           // console.log("REPLACED: ", or_words[i].replace("[^a-z]+"));
-          console.log("!undef");
           if (or_words[i].toLowerCase() === words[i].toLowerCase()) {
-            console.log("MATCHED: ", or_words[i].toLowerCase());
+            //console.log("MATCHED: ", or_words[i].toLowerCase());
             matched++;
           } else {
-            console.log("NOT MATCHED: ", or_words[i].toLowerCase());
+            //console.log("NOT MATCHED: ", or_words[i].toLowerCase());
             not_matched++;
           }
         }
