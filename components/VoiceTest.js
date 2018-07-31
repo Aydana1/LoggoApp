@@ -44,7 +44,8 @@ export default class VoiceTest extends Component {
           level: 3,
           text: "Шесть мышат в камышах шуршат."
         }
-      ]
+      ],
+      outputs: [{ word: "", added: false }]
     };
     Voice.onSpeechStart = this.onSpeechStart.bind(this);
     Voice.onSpeechRecognized = this.onSpeechRecognized.bind(this);
@@ -128,10 +129,10 @@ export default class VoiceTest extends Component {
           //red
           console.log(part.value);
         }
-        parts.push(part.value);
+        this.setState({...this.state.outputs, {word: part.value, added: part.added}})
+        // parts.push(part.value);
       });
-
-      console.log("JOINED: ", parts.join(""));
+      // console.log("JOINED: ", parts.join(""));
 
       await Voice.start("ru-RU");
     } catch (e) {
@@ -173,6 +174,9 @@ export default class VoiceTest extends Component {
   }
 
   renderItem = ({ item }) => {
+    const parts = this.state.outputs.map(part => 
+      console.log("PART: ", part.value)
+    )
     return (
       <Card>
         <CardContent style={{ backgroundColor: "green" }}>
