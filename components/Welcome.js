@@ -12,14 +12,15 @@ import {
 
 import { Provider, Button, Card, Title, Paragraph } from "react-native-paper";
 
-export default class AppGuide extends Component {
+export default class Welcome extends Component {
   render() {
     return (
       <Provider>
-        <Text>APP GUIDE</Text>
+        <Text>WELCOME</Text>
         <Button
+          style={{ backgroundColor: "pink" }}
           raised
-          onPress={() => this.props.navigation.navigate("VoiceTest")}
+          onPress={() => this.props.navigation.navigate("AppGuide")}
         >
           Next
         </Button>
