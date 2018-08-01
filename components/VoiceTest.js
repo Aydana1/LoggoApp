@@ -18,6 +18,7 @@ import { Provider, Button, Card, Title, Paragraph } from "react-native-paper";
 import Voice from "react-native-voice";
 import CardContent from "../node_modules/react-native-paper/src/components/Card/CardContent";
 import CardCover from "../node_modules/react-native-paper/src/components/Card/CardCover";
+var outputs_arr = [];
 
 export default class VoiceTest extends Component {
   constructor(props) {
@@ -115,24 +116,21 @@ export default class VoiceTest extends Component {
     try {
       const or_poems = this.state.poems.map(poem => poem.text);
       const original_poem = or_poems[2];
-      console.log(original_poem);
-      console.log(this.state.results[0]);
       var diff = jsdiff.diffChars(original_poem, "Шест мышат в камышах шулшат");
       var parts = [];
-      diff.forEach(function(part) {
-        console.log(part);
-        if (part.added) {
-          //green
-          console.log(part.value);
-        } else if (part.removed) {
-          //red
-          console.log(part.value);
-        }
-        parts.push(part.value);
+      diff.forEach(part => {
+        // parts.push(part.value);
+        console.log("part: ", part);
+        outputs_arr = [
+          ...outputs_arr,
+          { word: part.value, added: part.added, removed: part.removed }
+        ];
       });
 
-      console.log("JOINED: ", parts.join(""));
+      console.log("OUTPUTS: ", outputs_arr);
 
+      // var outputs = outputs_arr.map(item => console.log(item));
+      // console.log("JOINED: ", outputs.join(""));
       await Voice.start("ru-RU");
     } catch (e) {
       console.error(e);
@@ -180,6 +178,34 @@ export default class VoiceTest extends Component {
         </CardContent>
       </Card>
     );
+  };
+
+  renderItem2 = ({ item }) => {
+    if (item.added) {
+      return (
+        <Card>
+          <CardContent style={{ backgroundColor: "white" }}>
+            <Paragraph style={{ color: "green" }}>{item.word}</Paragraph>
+          </CardContent>
+        </Card>
+      );
+    } else if (item.removed) {
+      return (
+        <Card>
+          <CardContent style={{ backgroundColor: "white" }}>
+            <Paragraph style={{ color: "red" }}>{item.word}</Paragraph>
+          </CardContent>
+        </Card>
+      );
+    } else {
+      return (
+        <Card>
+          <CardContent style={{ backgroundColor: "white" }}>
+            <Paragraph style={{ color: "black" }}>{item.word}</Paragraph>
+          </CardContent>
+        </Card>
+      );
+    }
   };
 
   calculateDifference = ({ poem1 }) => {
@@ -258,6 +284,13 @@ export default class VoiceTest extends Component {
             data={this.state.results}
             renderItem={this.renderItem}
             keyExtractor={item => item}
+          />
+
+          <FlatList
+            style={{ flexDirection: "row" }}
+            data={outputs_arr}
+            renderItem={this.renderItem2}
+            keyExtractor={(item, index) => index}
           />
 
           <Button
