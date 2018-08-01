@@ -4,8 +4,6 @@ import { Provider } from "react-native-paper";
 import { createStackNavigator } from "react-navigation";
 
 import VoiceTest from "./components/VoiceTest";
-import Results from "./components/Results";
-import TabBar from "./components/TabBar";
 import Welcome from "./components/Welcome";
 import AppGuide from "./components/AppGuide";
 
@@ -16,7 +14,6 @@ class App extends React.Component {
     return (
       <Provider>
         <RootStack />
-        {/* <TabBar /> */}
       </Provider>
     );
   }
@@ -26,11 +23,10 @@ const RootStack = createStackNavigator(
   {
     Welcome: Welcome,
     AppGuide: AppGuide,
-    VoiceTest: VoiceTest,
-    Results: Results
+    VoiceTest: VoiceTest
   },
   {
-    initialRouteName: "Welcome"
+    initialRouteName: "AppGuide"
   }
 );
 
