@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import { AppRegistry, StatusBar } from "react-native";
 import { Provider } from "react-native-paper";
-import { createStackNavigator } from "react-navigation";
+import {
+  createStackNavigator,
+  createBottomTabNavigator,
+  TabBarBottom
+} from "react-navigation";
+import Ionicons from "react-native-vector-icons/dist/Ionicons";
+
+console.log("II ", Ionicons);
 
 import VoiceTest from "./components/VoiceTest";
 import Welcome from "./components/Welcome";
 import AppGuide from "./components/AppGuide";
 import Results from "./components/Results";
-// import TabBar from "./components/TabBar";
+import Home from "./components/tabBar/Home";
+import Profile from "./components/tabBar/Profile";
 
 console.disableYellowBox = true;
 
@@ -38,7 +46,38 @@ const RootStack = createStackNavigator(
       })
     },
     VoiceTest: {
-      screen: VoiceTest,
+      screen: createBottomTabNavigator(
+        {
+          VoiceTest: {
+            screen: VoiceTest,
+            navigationOptions: ({ navigation }) => ({
+              headerLeft: null,
+              header: null
+            })
+          },
+          Home: {
+            screen: Home,
+            navigationOptions: ({ navigation }) => ({
+              // title: "Welcome",
+              headerLeft: null,
+              header: null
+            })
+          }
+        },
+        {
+          navigationOptions: ({ navigation }) => ({
+            tabBarIcon: ({ focused, tintColor }) => {
+              const { routeName } = navigation.state;
+              let iconName;
+              if (routeName === "Home") {
+                return <Ionicons name="apps" size={25} color="red" />;
+              } else if (routeName === "VoiceTest") {
+                return <Ionicons name="albums" size={25} color="red" />;
+              }
+            }
+          })
+        }
+      ),
       navigationOptions: ({ navigation }) => ({
         // title: "Welcome",
         headerLeft: null,

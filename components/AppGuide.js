@@ -16,7 +16,7 @@ const levels = [
     text: "Буквы С, Р, Ш",
     info: {
       poem: "Цыплята и курица пьют чай на улице.",
-      level: 0
+      level: 1
     },
     // image: require('./assets/1.jpg'),
     // imageStyle: styles.image,
@@ -28,11 +28,11 @@ const levels = [
     title: "Уровень 2",
     text: "Буквы К, Ж, П",
     info: {
-      poem: "Цыплята и курица пьют чай на улице.",
-      level: 0
+      poem:
+        "Четыpе чёpненьких чумазеньких чеpтёнка чеpтили чёpными чеpнилами чеpтёж.",
+      level: 2
     },
-    poem:
-      "Четыpе чёpненьких чумазеньких чеpтёнка чеpтили чёpными чеpнилами чеpтёж.",
+
     // image: require('./assets/2.jpg'),
     // imageStyle: styles.image,
     backgroundColor: "#FFAB40",
@@ -43,12 +43,10 @@ const levels = [
     title: "Уровень 3",
     text: "Буквы Х, Ф, Ц",
     info: {
-      poem: "Цыплята и курица пьют чай на улице.",
-      level: 0
+      poem: "Чеpепaхa, не скучaя, чaс сидит зa чaшкой чaя.",
+      level: 3
     },
-    poem: "Чеpепaхa, не скучaя, чaс сидит зa чaшкой чaя",
-    // image: require('./assets/3.jpg'),
-    // imageStyle: styles.image,
+
     backgroundColor: "#00BFA5",
     titleStyle: { color: "white" }
   },
@@ -57,12 +55,10 @@ const levels = [
     title: "Уровень 4",
     text: "Буквы Х, Ф, Ц",
     info: {
-      poem: "Цыплята и курица пьют чай на улице.",
-      level: 0
+      poem: "Выскочила мышка из-под рундучка, И опять под рундучок.",
+      level: 4
     },
-    poem: "Выскочила мышка из-под рундучка, И опять под рундучок",
-    // image: require('./assets/3.jpg'),
-    // imageStyle: styles.image,
+
     backgroundColor: "#8E24AA",
     titleStyle: { color: "white" }
   }

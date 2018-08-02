@@ -12,7 +12,6 @@ import {
 import { Button, Card, Title, Paragraph } from "react-native-paper";
 import CardContent from "../node_modules/react-native-paper/src/components/Card/CardContent";
 import CardCover from "../node_modules/react-native-paper/src/components/Card/CardCover";
-// import TabBar from "./TabBar";
 
 export default class VoiceTest extends React.Component {
   showResults = () => {
@@ -42,7 +41,7 @@ export default class VoiceTest extends React.Component {
               marginTop: 20
             }}
           >
-            Uroven {level}
+            Уровень {level}
           </Text>
 
           <Card
