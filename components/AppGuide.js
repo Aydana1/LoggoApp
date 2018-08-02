@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { View, StyleSheet, Text, StatusBar } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
 
 const styles = StyleSheet.create({
@@ -9,30 +9,62 @@ const styles = StyleSheet.create({
   }
 });
 
-const slides = [
+const levels = [
   {
     key: "somethun",
-    title: "Title 1",
-    text: "Description.\nSay something cool",
+    title: "Уровень 1",
+    text: "Буквы С, Р, Ш",
+    info: {
+      poem: "Цыплята и курица пьют чай на улице.",
+      level: 0
+    },
     // image: require('./assets/1.jpg'),
     // imageStyle: styles.image,
-    backgroundColor: "#59b2ab"
+    backgroundColor: "#C2185B",
+    titleStyle: { color: "white" }
   },
   {
     key: "somethun-dos",
-    title: "Title 2",
-    text: "Other cool stuff",
+    title: "Уровень 2",
+    text: "Буквы К, Ж, П",
+    info: {
+      poem: "Цыплята и курица пьют чай на улице.",
+      level: 0
+    },
+    poem:
+      "Четыpе чёpненьких чумазеньких чеpтёнка чеpтили чёpными чеpнилами чеpтёж.",
     // image: require('./assets/2.jpg'),
     // imageStyle: styles.image,
-    backgroundColor: "#febe29"
+    backgroundColor: "#FFAB40",
+    titleStyle: { color: "white" }
   },
   {
-    key: "somethun1",
-    title: "Rocket guy",
-    text: "I'm already out of descriptions\n\nLorem ipsum bla bla bla",
+    key: "somethun3",
+    title: "Уровень 3",
+    text: "Буквы Х, Ф, Ц",
+    info: {
+      poem: "Цыплята и курица пьют чай на улице.",
+      level: 0
+    },
+    poem: "Чеpепaхa, не скучaя, чaс сидит зa чaшкой чaя",
     // image: require('./assets/3.jpg'),
     // imageStyle: styles.image,
-    backgroundColor: "#22bcb5"
+    backgroundColor: "#00BFA5",
+    titleStyle: { color: "white" }
+  },
+  {
+    key: "somethun4",
+    title: "Уровень 4",
+    text: "Буквы Х, Ф, Ц",
+    info: {
+      poem: "Цыплята и курица пьют чай на улице.",
+      level: 0
+    },
+    poem: "Выскочила мышка из-под рундучка, И опять под рундучок",
+    // image: require('./assets/3.jpg'),
+    // imageStyle: styles.image,
+    backgroundColor: "#8E24AA",
+    titleStyle: { color: "white" }
   }
 ];
 
@@ -40,15 +72,31 @@ export default class AppGuide extends React.Component {
   state = {
     showRealApp: false
   };
+
   _onDone = () => {
     this.setState({ showRealApp: true });
-    this.props.navigation.navigate("VoiceTest");
   };
+
+  itemPress = index => {
+    const currentLevel = levels[index];
+
+    if (currentLevel) {
+      this.props.navigation.navigate("VoiceTest", { currentLevel });
+    } else {
+      console.warn("Current level is empty");
+    }
+  };
+
   render() {
     if (this.state.showRealApp) {
       return <AppGuide />;
     } else {
-      return <AppIntroSlider slides={slides} onDone={this._onDone} />;
+      return (
+        <AppIntroSlider
+          slides={levels}
+          onItemPress={index => this.itemPress(index)}
+        />
+      );
     }
   }
 }

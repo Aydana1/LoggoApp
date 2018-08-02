@@ -10,21 +10,31 @@ import {
   TouchableHighlight
 } from "react-native";
 
-import { Provider, Button, Card, Title, Paragraph } from "react-native-paper";
+import { Button, Card, Title, Paragraph } from "react-native-paper";
 
 export default class Welcome extends Component {
   render() {
     return (
-      <Provider>
-        <Text>WELCOME</Text>
+      <View
+        style={{
+          backgroundColor: "#4A148C",
+          height: 660,
+          flex: 1,
+          flexDirection: "column",
+          justifyContent: "space-around",
+          alignItems: "center"
+        }}
+      >
+        <Text style={{ color: "white" }}>Добро пожаловать!</Text>
         <Button
-          style={{ backgroundColor: "pink" }}
+          style={{ backgroundColor: "white" }}
           raised
+          color="#4A148C"
           onPress={() => this.props.navigation.navigate("AppGuide")}
         >
-          Next
+          Войти
         </Button>
-      </Provider>
+      </View>
     );
   }
 }

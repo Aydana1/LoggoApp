@@ -10,7 +10,7 @@
     "diff": "^3.5.0",
     "react": "16.4.1",
     "react-native": "0.56.0",
-    "react-native-app-intro-slider": "^1.0.1",
+    "react-native-app-intro-slider": "git+https://github.com/Aydana1/react-native-app-intro-slider",
     "react-native-paper": "^2.0.0-alpha.7",
     "react-native-vector-icons": "^5.0.0",
     "react-native-voice": "^0.2.6",
