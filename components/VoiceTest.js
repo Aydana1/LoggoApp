@@ -143,7 +143,8 @@ export default class VoiceTest extends React.Component {
 
   render() {
     const { currentLevel } = this.props.navigation.state.params;
-    const { info } = currentLevel;
+    const { info, backgroundColor } = currentLevel;
+    console.log("backgroundColor", backgroundColor);
     const { poem, level, img } = info;
 
     const poem_filtered = poem.replace(/[\.\,]/g, "");
@@ -183,7 +184,7 @@ export default class VoiceTest extends React.Component {
               width: 300
             }}
           >
-            <CardContent style={styles.cardContent}>
+            <CardContent style={[styles.cardContent, { backgroundColor }]}>
               <Paragraph style={styles.card}>{poem}</Paragraph>
             </CardContent>
             <CardCover style={styles.image} source={img} />

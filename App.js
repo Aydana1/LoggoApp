@@ -9,8 +9,6 @@ import {
 import Ionicons from "react-native-vector-icons/dist/Ionicons";
 import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
 
-console.log("II ", Ionicons);
-
 import VoiceTest from "./components/VoiceTest";
 import Welcome from "./components/Welcome";
 import AppGuide from "./components/AppGuide";
@@ -48,57 +46,65 @@ const RootStack = createStackNavigator(
       })
     },
     VoiceTest: {
-      screen: createBottomTabNavigator(
-        {
-          VoiceTest: {
-            screen: VoiceTest,
-            navigationOptions: ({ navigation }) => ({
-              headerLeft: null,
-              header: null
-            })
-          },
-          Home: {
-            screen: AppGuide,
-            navigationOptions: ({ navigation }) => ({
-              // title: "Welcome",
-              headerLeft: null,
-              header: null
-            })
-          }
-        },
-        {
-          navigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, tintColor }) => {
-              const { routeName } = navigation.state;
-              let iconName;
-              if (routeName === "Home") {
-                return (
-                  <MaterialIcons
-                    name="trending-up"
-                    size={25}
-                    color={tintColor}
-                  />
-                );
-              } else if (routeName === "VoiceTest") {
-                return (
-                  <MaterialIcons name="extension" size={25} color={tintColor} />
-                );
-              }
-            }
-          }),
-          tabBarOptions: {
-            showLabel: false,
-            activeTintColor: "#29B6F6",
-            inactiveTintColor: "gray"
-          }
-        }
-      ),
+      screen: VoiceTest,
       navigationOptions: ({ navigation }) => ({
-        // title: "Welcome",
         headerLeft: null,
         header: null
       })
     },
+
+    // {
+    //   screen: createBottomTabNavigator(
+    //     {
+    //       VoiceTest: {
+    //         screen: VoiceTest,
+    //         navigationOptions: ({ navigation }) => ({
+    //           headerLeft: null,
+    //           header: null
+    //         })
+    //       },
+    //       Home: {
+    //         screen: AppGuide,
+    //         navigationOptions: ({ navigation }) => ({
+    //           // title: "Welcome",
+    //           headerLeft: null,
+    //           header: null
+    //         })
+    //       }
+    //     },
+    //     {
+    //       navigationOptions: ({ navigation }) => ({
+    //         tabBarIcon: ({ focused, tintColor }) => {
+    //           const { routeName } = navigation.state;
+    //           let iconName;
+    //           if (routeName === "Home") {
+    //             return (
+    //               <MaterialIcons
+    //                 name="trending-up"
+    //                 size={25}
+    //                 color={tintColor}
+    //               />
+    //             );
+    //           } else if (routeName === "VoiceTest") {
+    //             return (
+    //               <MaterialIcons name="extension" size={25} color={tintColor} />
+    //             );
+    //           }
+    //         }
+    //       }),
+    //       tabBarOptions: {
+    //         showLabel: false,
+    //         activeTintColor: "#29B6F6",
+    //         inactiveTintColor: "gray"
+    //       }
+    //     }
+    //   ),
+    //   navigationOptions: ({ navigation }) => ({
+    //     // title: "Welcome",
+    //     headerLeft: null,
+    //     header: null
+    //   })
+    // },
     Results: {
       screen: Results,
       navigationOptions: ({ navigation }) => ({
