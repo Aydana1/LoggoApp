@@ -12,17 +12,165 @@ import {
 import { Button, Card, Title, Paragraph } from "react-native-paper";
 import CardContent from "../node_modules/react-native-paper/src/components/Card/CardContent";
 import CardCover from "../node_modules/react-native-paper/src/components/Card/CardCover";
+import Voice from "react-native-voice";
 
 export default class VoiceTest extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recognized: "",
+      pitch: "",
+      error: "",
+      end: "",
+      started: "",
+      results: [],
+      partialResults: [],
+      words: []
+    };
+    Voice.onSpeechStart = this.onSpeechStart.bind(this);
+    Voice.onSpeechRecognized = this.onSpeechRecognized.bind(this);
+    Voice.onSpeechEnd = this.onSpeechEnd.bind(this);
+    Voice.onSpeechError = this.onSpeechError.bind(this);
+    Voice.onSpeechResults = this.onSpeechResults.bind(this);
+    Voice.onSpeechPartialResults = this.onSpeechPartialResults.bind(this);
+    Voice.onSpeechVolumeChanged = this.onSpeechVolumeChanged.bind(this);
+  }
+
+  componentWillUnmount() {
+    Voice.destroy().then(Voice.removeAllListeners);
+  }
+
+  onSpeechStart(e) {
+    this.setState({
+      started: "√"
+    });
+  }
+
+  onSpeechRecognized(e) {
+    this.setState({
+      recognized: "√"
+    });
+  }
+
+  onSpeechEnd(e) {
+    this.setState({
+      end: "√"
+    });
+  }
+
+  onSpeechError(e) {
+    this.setState({
+      error: JSON.stringify(e.error)
+    });
+  }
+
+  onSpeechResults(e) {
+    this.setState({
+      results: e.value[0]
+    });
+    const words = e.value[0].spit(" ");
+    this.setState({ words });
+    console.log("RESULT: ", e.value[0]);
+    console.log("WORDS: ", words);
+  }
+
+  onSpeechPartialResults(e) {
+    this.setState({
+      partialResults: e.value
+    });
+  }
+
+  onSpeechVolumeChanged(e) {
+    this.setState({
+      pitch: e.value
+    });
+  }
+
+  async _startRecognizing(e) {
+    this.setState({
+      recognized: "",
+      pitch: "",
+      error: "",
+      started: "",
+      results: [],
+      partialResults: [],
+      end: ""
+    });
+
+    try {
+      await Voice.start("ru-RU");
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async _stopRecognizing(e) {
+    try {
+      await Voice.stop();
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async _cancelRecognizing(e) {
+    try {
+      await Voice.cancel();
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async _destroyRecognizer(e) {
+    try {
+      await Voice.destroy();
+    } catch (e) {
+      console.error(e);
+    }
+    this.setState({
+      recognized: "",
+      pitch: "",
+      error: "",
+      started: "",
+      results: [],
+      partialResults: [],
+      end: ""
+    });
+  }
+
   showResults = () => {
-    console.log("HHHHHoo");
     this.props.navigation.navigate("Results");
   };
 
   render() {
     const { currentLevel } = this.props.navigation.state.params;
     const { info } = currentLevel;
-    const { poem, level } = info;
+    const { poem, level, img } = info;
+
+    const poem_filtered = poem.replace(/[\.\,]/g, "");
+    const terms = poem_filtered.split(" ");
+
+    // const results = this.state.results.map(result => {
+    //   const words = result.split(" "); //removing spaces between words and storing them in an array
+
+    console.log("RRRRRR ", this.state.results);
+
+    // var matched = 0;
+    // var not_matched = 0;
+
+    // for (var i = 0; i < poem_filtered.length; ++i) {
+    //   // console.log(words[i], terms[i]);
+    //   if (words[i] != undefined && terms[i] != undefined) {
+    //     if (words[i].toLowerCase() === terms[i].toLowerCase()) {
+    //       matched++;
+    //       console.log(matched);
+    //     } else {
+    //       not_matched++;
+    //     }
+    //   }
+    // }
+    // var score = (matched / terms.length) * 100;
+    // console.log("YOUR SCORE ", score);
+    // });
 
     return (
       <ScrollView>
@@ -38,7 +186,7 @@ export default class VoiceTest extends React.Component {
             <CardContent style={styles.cardContent}>
               <Paragraph style={styles.card}>{poem}</Paragraph>
             </CardContent>
-            {/* <CardCover source={{ uri: "https://picsum.photos/700" }} /> */}
+            <CardCover style={styles.image} source={img} />
           </Card>
 
           <View
@@ -47,7 +195,7 @@ export default class VoiceTest extends React.Component {
               alignItems: "center"
             }}
           >
-            <TouchableHighlight>
+            <TouchableHighlight onPress={this._startRecognizing.bind(this)}>
               <Image
                 style={styles.button}
                 source={require("../microphone.png")}
@@ -63,20 +211,18 @@ export default class VoiceTest extends React.Component {
               }}
               raised
               color="white"
+              onPress={this._stopRecognizing.bind(this)}
             >
               Stop
             </Button>
           </View>
-          <Text style={styles.text}>Ваша речь:</Text>
 
+          <Text style={styles.text}>Ваша речь:</Text>
           <Card style={{ width: 300 }}>
             <CardContent style={styles.cardContent}>
-              <Paragraph style={styles.card}>
-                Тощий немощный Кощей Тащит ящик овощей.
-              </Paragraph>
+              <Paragraph style={styles.card}>{this.state.results}</Paragraph>
             </CardContent>
           </Card>
-
           <Button
             style={{ backgroundColor: "#FFAB40", width: 150 }}
             color="white"
@@ -92,8 +238,10 @@ export default class VoiceTest extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  image: {
+    resizeMode: "contain"
+  },
   button: {
-    // marginBottom: 10,
     width: 70,
     height: 70
   },
@@ -108,7 +256,9 @@ const styles = StyleSheet.create({
   card: {
     color: "white",
     textAlign: "center",
-    fontFamily: "Cormorant-Regular",
+    // fontFamily: "Cormorant-Regular",
+    fontFamily: "Kurale-Regular",
+
     fontSize: 20
   },
   cardContent: {
@@ -117,7 +267,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "center",
     fontSize: 20,
-    fontFamily: "OldStandard-Regular",
+    fontFamily: "CormorantInfant-Bold",
     color: "#C2185B",
     marginTop: 20
   }

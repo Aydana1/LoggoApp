@@ -16,7 +16,7 @@ class Home extends React.Component {
             color: "white"
           }}
         >
-          HOME
+          Statistics
         </Text>
       </View>
     );

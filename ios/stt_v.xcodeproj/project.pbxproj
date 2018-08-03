@@ -85,6 +85,26 @@
 		AD8D3103214B4336BD21750D /* Vollkorn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D6B220E2E444819AB59520 /* Vollkorn-Regular.ttf */; };
 		F1BC40E8AE8E4F868093A1EE /* Vollkorn-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1096974B2194D618C70A62F /* Vollkorn-SemiBold.ttf */; };
 		1798F2D1741A479E878912F9 /* Vollkorn-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4A49D0D8F54330BDCB1E0E /* Vollkorn-SemiBoldItalic.ttf */; };
+		34E1B64EB9E34FBD950F7C16 /* AlegreyaSC-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45F2FB0AA79F4447924BF1F3 /* AlegreyaSC-Black.ttf */; };
+		2645F20D57EB4DAD90548E3F /* AlegreyaSC-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F34E092C988F46FBAF921BF7 /* AlegreyaSC-BlackItalic.ttf */; };
+		F964813050E1445FA637F5C1 /* AlegreyaSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B75014742DF4E72A5797F46 /* AlegreyaSC-Bold.ttf */; };
+		EA6A850F06A6420F835F2393 /* AlegreyaSC-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF3E3E80164BB1B2BD6101 /* AlegreyaSC-BoldItalic.ttf */; };
+		6E1109D05BC54834BD5AF1FD /* AlegreyaSC-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7708C020A7824E808D449D6C /* AlegreyaSC-ExtraBold.ttf */; };
+		B526BB4BDBF54628B0904382 /* AlegreyaSC-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 093E6EBB3C02488F8D19D3BE /* AlegreyaSC-ExtraBoldItalic.ttf */; };
+		F83260674269431A878E7A27 /* AlegreyaSC-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A925AD1B642EBB59D20BC /* AlegreyaSC-Italic.ttf */; };
+		845C5D34062342938DD5FE2A /* AlegreyaSC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09CBD7B8C3D940A496A1186D /* AlegreyaSC-Medium.ttf */; };
+		593517AD5F7E4CBB98489C5D /* AlegreyaSC-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB4382C13924A46AF9304C1 /* AlegreyaSC-MediumItalic.ttf */; };
+		BA7265A375A444DEBA34CB0C /* AlegreyaSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9757DCB9E835408AAC9374C8 /* AlegreyaSC-Regular.ttf */; };
+		3F674116E20B40B286AEEB95 /* CormorantInfant-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E6EBB17EA488BBDA3CBE7 /* CormorantInfant-Bold.ttf */; };
+		C1CBAB04A38A48009445ECA6 /* CormorantInfant-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700952C597C404D965158A9 /* CormorantInfant-BoldItalic.ttf */; };
+		6BE3DA2997A743FCBAD4ACBA /* CormorantInfant-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72DAEA23BCF048DDB0DF7717 /* CormorantInfant-Italic.ttf */; };
+		09D0FA96AB824E31A9D1BDD0 /* CormorantInfant-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FD39C45C574413B170E188 /* CormorantInfant-Light.ttf */; };
+		092027803D3C4AED8A06F89A /* CormorantInfant-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CD9211C749C4E878851128A /* CormorantInfant-LightItalic.ttf */; };
+		25CF82C06B704186B8FEFEC1 /* CormorantInfant-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3E463E3A6C44C139FC59E98 /* CormorantInfant-Medium.ttf */; };
+		4A330F6F462C4046865313B8 /* CormorantInfant-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E73A566DD74429ACFEEC5D /* CormorantInfant-MediumItalic.ttf */; };
+		962F2ECBB1CC4F828FBBD733 /* CormorantInfant-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE0A4D1D007B4F3A8B55660F /* CormorantInfant-Regular.ttf */; };
+		6F7ED4D37DD94CAD8D4F3D50 /* CormorantInfant-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7372A5179CD49F781B0B2B4 /* CormorantInfant-SemiBold.ttf */; };
+		7A8CB2E073634D1FAABC4CD3 /* CormorantInfant-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99EE5D1578641C6825057F6 /* CormorantInfant-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +460,26 @@
 		70D6B220E2E444819AB59520 /* Vollkorn-Regular.ttf */ = {isa = PBXFileReference; name = "Vollkorn-Regular.ttf"; path = "../assets/fonts/Vollkorn-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A1096974B2194D618C70A62F /* Vollkorn-SemiBold.ttf */ = {isa = PBXFileReference; name = "Vollkorn-SemiBold.ttf"; path = "../assets/fonts/Vollkorn-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FA4A49D0D8F54330BDCB1E0E /* Vollkorn-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Vollkorn-SemiBoldItalic.ttf"; path = "../assets/fonts/Vollkorn-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		45F2FB0AA79F4447924BF1F3 /* AlegreyaSC-Black.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-Black.ttf"; path = "../assets/fonts/AlegreyaSC-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F34E092C988F46FBAF921BF7 /* AlegreyaSC-BlackItalic.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-BlackItalic.ttf"; path = "../assets/fonts/AlegreyaSC-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6B75014742DF4E72A5797F46 /* AlegreyaSC-Bold.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-Bold.ttf"; path = "../assets/fonts/AlegreyaSC-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56BF3E3E80164BB1B2BD6101 /* AlegreyaSC-BoldItalic.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-BoldItalic.ttf"; path = "../assets/fonts/AlegreyaSC-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7708C020A7824E808D449D6C /* AlegreyaSC-ExtraBold.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-ExtraBold.ttf"; path = "../assets/fonts/AlegreyaSC-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		093E6EBB3C02488F8D19D3BE /* AlegreyaSC-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-ExtraBoldItalic.ttf"; path = "../assets/fonts/AlegreyaSC-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		347A925AD1B642EBB59D20BC /* AlegreyaSC-Italic.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-Italic.ttf"; path = "../assets/fonts/AlegreyaSC-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		09CBD7B8C3D940A496A1186D /* AlegreyaSC-Medium.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-Medium.ttf"; path = "../assets/fonts/AlegreyaSC-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0DB4382C13924A46AF9304C1 /* AlegreyaSC-MediumItalic.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-MediumItalic.ttf"; path = "../assets/fonts/AlegreyaSC-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9757DCB9E835408AAC9374C8 /* AlegreyaSC-Regular.ttf */ = {isa = PBXFileReference; name = "AlegreyaSC-Regular.ttf"; path = "../assets/fonts/AlegreyaSC-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7E3E6EBB17EA488BBDA3CBE7 /* CormorantInfant-Bold.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-Bold.ttf"; path = "../assets/fonts/CormorantInfant-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9700952C597C404D965158A9 /* CormorantInfant-BoldItalic.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-BoldItalic.ttf"; path = "../assets/fonts/CormorantInfant-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		72DAEA23BCF048DDB0DF7717 /* CormorantInfant-Italic.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-Italic.ttf"; path = "../assets/fonts/CormorantInfant-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14FD39C45C574413B170E188 /* CormorantInfant-Light.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-Light.ttf"; path = "../assets/fonts/CormorantInfant-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8CD9211C749C4E878851128A /* CormorantInfant-LightItalic.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-LightItalic.ttf"; path = "../assets/fonts/CormorantInfant-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F3E463E3A6C44C139FC59E98 /* CormorantInfant-Medium.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-Medium.ttf"; path = "../assets/fonts/CormorantInfant-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95E73A566DD74429ACFEEC5D /* CormorantInfant-MediumItalic.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-MediumItalic.ttf"; path = "../assets/fonts/CormorantInfant-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BE0A4D1D007B4F3A8B55660F /* CormorantInfant-Regular.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-Regular.ttf"; path = "../assets/fonts/CormorantInfant-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C7372A5179CD49F781B0B2B4 /* CormorantInfant-SemiBold.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-SemiBold.ttf"; path = "../assets/fonts/CormorantInfant-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D99EE5D1578641C6825057F6 /* CormorantInfant-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "CormorantInfant-SemiBoldItalic.ttf"; path = "../assets/fonts/CormorantInfant-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -755,6 +795,26 @@
 				70D6B220E2E444819AB59520 /* Vollkorn-Regular.ttf */,
 				A1096974B2194D618C70A62F /* Vollkorn-SemiBold.ttf */,
 				FA4A49D0D8F54330BDCB1E0E /* Vollkorn-SemiBoldItalic.ttf */,
+				45F2FB0AA79F4447924BF1F3 /* AlegreyaSC-Black.ttf */,
+				F34E092C988F46FBAF921BF7 /* AlegreyaSC-BlackItalic.ttf */,
+				6B75014742DF4E72A5797F46 /* AlegreyaSC-Bold.ttf */,
+				56BF3E3E80164BB1B2BD6101 /* AlegreyaSC-BoldItalic.ttf */,
+				7708C020A7824E808D449D6C /* AlegreyaSC-ExtraBold.ttf */,
+				093E6EBB3C02488F8D19D3BE /* AlegreyaSC-ExtraBoldItalic.ttf */,
+				347A925AD1B642EBB59D20BC /* AlegreyaSC-Italic.ttf */,
+				09CBD7B8C3D940A496A1186D /* AlegreyaSC-Medium.ttf */,
+				0DB4382C13924A46AF9304C1 /* AlegreyaSC-MediumItalic.ttf */,
+				9757DCB9E835408AAC9374C8 /* AlegreyaSC-Regular.ttf */,
+				7E3E6EBB17EA488BBDA3CBE7 /* CormorantInfant-Bold.ttf */,
+				9700952C597C404D965158A9 /* CormorantInfant-BoldItalic.ttf */,
+				72DAEA23BCF048DDB0DF7717 /* CormorantInfant-Italic.ttf */,
+				14FD39C45C574413B170E188 /* CormorantInfant-Light.ttf */,
+				8CD9211C749C4E878851128A /* CormorantInfant-LightItalic.ttf */,
+				F3E463E3A6C44C139FC59E98 /* CormorantInfant-Medium.ttf */,
+				95E73A566DD74429ACFEEC5D /* CormorantInfant-MediumItalic.ttf */,
+				BE0A4D1D007B4F3A8B55660F /* CormorantInfant-Regular.ttf */,
+				C7372A5179CD49F781B0B2B4 /* CormorantInfant-SemiBold.ttf */,
+				D99EE5D1578641C6825057F6 /* CormorantInfant-SemiBoldItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1252,6 +1312,26 @@
 				AD8D3103214B4336BD21750D /* Vollkorn-Regular.ttf in Resources */,
 				F1BC40E8AE8E4F868093A1EE /* Vollkorn-SemiBold.ttf in Resources */,
 				1798F2D1741A479E878912F9 /* Vollkorn-SemiBoldItalic.ttf in Resources */,
+				34E1B64EB9E34FBD950F7C16 /* AlegreyaSC-Black.ttf in Resources */,
+				2645F20D57EB4DAD90548E3F /* AlegreyaSC-BlackItalic.ttf in Resources */,
+				F964813050E1445FA637F5C1 /* AlegreyaSC-Bold.ttf in Resources */,
+				EA6A850F06A6420F835F2393 /* AlegreyaSC-BoldItalic.ttf in Resources */,
+				6E1109D05BC54834BD5AF1FD /* AlegreyaSC-ExtraBold.ttf in Resources */,
+				B526BB4BDBF54628B0904382 /* AlegreyaSC-ExtraBoldItalic.ttf in Resources */,
+				F83260674269431A878E7A27 /* AlegreyaSC-Italic.ttf in Resources */,
+				845C5D34062342938DD5FE2A /* AlegreyaSC-Medium.ttf in Resources */,
+				593517AD5F7E4CBB98489C5D /* AlegreyaSC-MediumItalic.ttf in Resources */,
+				BA7265A375A444DEBA34CB0C /* AlegreyaSC-Regular.ttf in Resources */,
+				3F674116E20B40B286AEEB95 /* CormorantInfant-Bold.ttf in Resources */,
+				C1CBAB04A38A48009445ECA6 /* CormorantInfant-BoldItalic.ttf in Resources */,
+				6BE3DA2997A743FCBAD4ACBA /* CormorantInfant-Italic.ttf in Resources */,
+				09D0FA96AB824E31A9D1BDD0 /* CormorantInfant-Light.ttf in Resources */,
+				092027803D3C4AED8A06F89A /* CormorantInfant-LightItalic.ttf in Resources */,
+				25CF82C06B704186B8FEFEC1 /* CormorantInfant-Medium.ttf in Resources */,
+				4A330F6F462C4046865313B8 /* CormorantInfant-MediumItalic.ttf in Resources */,
+				962F2ECBB1CC4F828FBBD733 /* CormorantInfant-Regular.ttf in Resources */,
+				6F7ED4D37DD94CAD8D4F3D50 /* CormorantInfant-SemiBold.ttf in Resources */,
+				7A8CB2E073634D1FAABC4CD3 /* CormorantInfant-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

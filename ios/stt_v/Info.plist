@@ -99,6 +99,26 @@
 		<string>Vollkorn-Regular.ttf</string>
 		<string>Vollkorn-SemiBold.ttf</string>
 		<string>Vollkorn-SemiBoldItalic.ttf</string>
+		<string>AlegreyaSC-Black.ttf</string>
+		<string>AlegreyaSC-BlackItalic.ttf</string>
+		<string>AlegreyaSC-Bold.ttf</string>
+		<string>AlegreyaSC-BoldItalic.ttf</string>
+		<string>AlegreyaSC-ExtraBold.ttf</string>
+		<string>AlegreyaSC-ExtraBoldItalic.ttf</string>
+		<string>AlegreyaSC-Italic.ttf</string>
+		<string>AlegreyaSC-Medium.ttf</string>
+		<string>AlegreyaSC-MediumItalic.ttf</string>
+		<string>AlegreyaSC-Regular.ttf</string>
+		<string>CormorantInfant-Bold.ttf</string>
+		<string>CormorantInfant-BoldItalic.ttf</string>
+		<string>CormorantInfant-Italic.ttf</string>
+		<string>CormorantInfant-Light.ttf</string>
+		<string>CormorantInfant-LightItalic.ttf</string>
+		<string>CormorantInfant-Medium.ttf</string>
+		<string>CormorantInfant-MediumItalic.ttf</string>
+		<string>CormorantInfant-Regular.ttf</string>
+		<string>CormorantInfant-SemiBold.ttf</string>
+		<string>CormorantInfant-SemiBoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>

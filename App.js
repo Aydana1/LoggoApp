@@ -17,6 +17,7 @@ import AppGuide from "./components/AppGuide";
 import Results from "./components/Results";
 import Home from "./components/tabBar/Home";
 import Profile from "./components/tabBar/Profile";
+import Timer from "./components/Timer";
 
 console.disableYellowBox = true;
 
@@ -57,7 +58,7 @@ const RootStack = createStackNavigator(
             })
           },
           Home: {
-            screen: Home,
+            screen: AppGuide,
             navigationOptions: ({ navigation }) => ({
               // title: "Welcome",
               headerLeft: null,
@@ -72,17 +73,23 @@ const RootStack = createStackNavigator(
               let iconName;
               if (routeName === "Home") {
                 return (
-                  <MaterialIcons name="dashboard" size={25} color="#29B6F6" />
+                  <MaterialIcons
+                    name="trending-up"
+                    size={25}
+                    color={tintColor}
+                  />
                 );
               } else if (routeName === "VoiceTest") {
                 return (
-                  <MaterialIcons name="extension" size={25} color="#29B6F6" />
+                  <MaterialIcons name="extension" size={25} color={tintColor} />
                 );
               }
             }
           }),
           tabBarOptions: {
-            showLabel: false
+            showLabel: false,
+            activeTintColor: "#29B6F6",
+            inactiveTintColor: "gray"
           }
         }
       ),
@@ -94,6 +101,13 @@ const RootStack = createStackNavigator(
     },
     Results: {
       screen: Results,
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: null,
+        header: null
+      })
+    },
+    Timer: {
+      screen: Timer,
       navigationOptions: ({ navigation }) => ({
         headerLeft: null,
         header: null
