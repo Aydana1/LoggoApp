@@ -25,39 +25,18 @@ export default class VoiceTest extends React.Component {
     const { poem, level } = info;
 
     return (
-      <ScrollView
-        style={{
-          backgroundColor: "white"
-        }}
-      >
+      <ScrollView>
         <StatusBar translucent backgroundColor="rgba(0, 0, 0, 0.20)" animated />
-
         <View style={styles.container}>
-          <Text
-            style={{
-              textAlign: "center",
-              fontSize: 20,
-              color: "#C2185B",
-              marginTop: 20
-            }}
-          >
-            Уровень {level}
-          </Text>
+          <Text style={styles.text}>Уровень {level}</Text>
 
           <Card
             style={{
               width: 300
             }}
           >
-            <CardContent
-              style={{
-                backgroundColor: "#C2185B"
-              }}
-            >
-              {/* <Title style={{ color: "white" }}>Буква С</Title> */}
-              <Paragraph style={{ color: "white", textAlign: "center" }}>
-                {poem}
-              </Paragraph>
+            <CardContent style={styles.cardContent}>
+              <Paragraph style={styles.card}>{poem}</Paragraph>
             </CardContent>
             {/* <CardCover source={{ uri: "https://picsum.photos/700" }} /> */}
           </Card>
@@ -80,7 +59,7 @@ export default class VoiceTest extends React.Component {
                 backgroundColor: "#29B6F6",
                 width: 120,
                 height: 40,
-                marginLeft: 50
+                marginLeft: 90
               }}
               raised
               color="white"
@@ -88,19 +67,11 @@ export default class VoiceTest extends React.Component {
               Stop
             </Button>
           </View>
-          <Text
-            style={{
-              textAlign: "center",
-              fontSize: 20,
-              color: "#C2185B"
-            }}
-          >
-            Ваша речь:
-          </Text>
+          <Text style={styles.text}>Ваша речь:</Text>
 
           <Card style={{ width: 300 }}>
-            <CardContent style={{ backgroundColor: "#C2185B" }}>
-              <Paragraph style={{ color: "white", textAlign: "center" }}>
+            <CardContent style={styles.cardContent}>
+              <Paragraph style={styles.card}>
                 Тощий немощный Кощей Тащит ящик овощей.
               </Paragraph>
             </CardContent>
@@ -131,11 +102,27 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: "#CFD8DC",
     height: 660
+  },
+  card: {
+    color: "white",
+    textAlign: "center",
+    fontFamily: "Cormorant-Regular",
+    fontSize: 20
+  },
+  cardContent: {
+    backgroundColor: "#C2185B"
+  },
+  text: {
+    textAlign: "center",
+    fontSize: 20,
+    fontFamily: "OldStandard-Regular",
+    color: "#C2185B",
+    marginTop: 20
   }
 });
-
+//OldStandard-Regular
 //this.props.navigation.state.params.color
 
 AppRegistry.registerComponent("VoiceTest", () => VoiceTest);

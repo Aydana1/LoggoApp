@@ -7,6 +7,7 @@ import {
   TabBarBottom
 } from "react-navigation";
 import Ionicons from "react-native-vector-icons/dist/Ionicons";
+import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
 
 console.log("II ", Ionicons);
 
@@ -70,12 +71,19 @@ const RootStack = createStackNavigator(
               const { routeName } = navigation.state;
               let iconName;
               if (routeName === "Home") {
-                return <Ionicons name="apps" size={25} color="red" />;
+                return (
+                  <MaterialIcons name="dashboard" size={25} color="#29B6F6" />
+                );
               } else if (routeName === "VoiceTest") {
-                return <Ionicons name="albums" size={25} color="red" />;
+                return (
+                  <MaterialIcons name="extension" size={25} color="#29B6F6" />
+                );
               }
             }
-          })
+          }),
+          tabBarOptions: {
+            showLabel: false
+          }
         }
       ),
       navigationOptions: ({ navigation }) => ({

@@ -67,6 +67,38 @@
 		<string>FontAwesome5_Brands.ttf</string>
 		<string>FontAwesome5_Regular.ttf</string>
 		<string>FontAwesome5_Solid.ttf</string>
+		<string>BreeSerif-Regular.ttf</string>
+		<string>Cinzel-Black.ttf</string>
+		<string>Cinzel-Bold.ttf</string>
+		<string>Cinzel-Regular.ttf</string>
+		<string>Cormorant-Bold.ttf</string>
+		<string>Cormorant-BoldItalic.ttf</string>
+		<string>Cormorant-Italic.ttf</string>
+		<string>Cormorant-Light.ttf</string>
+		<string>Cormorant-LightItalic.ttf</string>
+		<string>Cormorant-Medium.ttf</string>
+		<string>Cormorant-MediumItalic.ttf</string>
+		<string>Cormorant-Regular.ttf</string>
+		<string>Cormorant-SemiBold.ttf</string>
+		<string>Cormorant-SemiBoldItalic.ttf</string>
+		<string>CormorantSC-Bold.ttf</string>
+		<string>CormorantSC-Light.ttf</string>
+		<string>CormorantSC-Medium.ttf</string>
+		<string>CormorantSC-Regular.ttf</string>
+		<string>CormorantSC-SemiBold.ttf</string>
+		<string>HeadlandOne-Regular.ttf</string>
+		<string>Kurale-Regular.ttf</string>
+		<string>OldStandard-Bold.ttf</string>
+		<string>OldStandard-Italic.ttf</string>
+		<string>OldStandard-Regular.ttf</string>
+		<string>Vollkorn-Black.ttf</string>
+		<string>Vollkorn-BlackItalic.ttf</string>
+		<string>Vollkorn-Bold.ttf</string>
+		<string>Vollkorn-BoldItalic.ttf</string>
+		<string>Vollkorn-Italic.ttf</string>
+		<string>Vollkorn-Regular.ttf</string>
+		<string>Vollkorn-SemiBold.ttf</string>
+		<string>Vollkorn-SemiBoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>

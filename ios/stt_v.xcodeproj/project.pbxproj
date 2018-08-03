@@ -53,6 +53,38 @@
 		B1F271CBD65445E6B6949CB5 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FF22FB14B7847DEA68BA9DB /* FontAwesome5_Brands.ttf */; };
 		B96C078B54AC4847AFB82BD6 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC3FB6DB58D94D9EAF502C81 /* FontAwesome5_Regular.ttf */; };
 		196E355A212245FEBE5A68E4 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2628B732EA934172BB812350 /* FontAwesome5_Solid.ttf */; };
+		043ED4CFDC984006863FF332 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1237C0B929B427E83547053 /* BreeSerif-Regular.ttf */; };
+		DBFF2C4CD64148BB85EFA859 /* Cinzel-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 884CFC343C194D71A2F3C360 /* Cinzel-Black.ttf */; };
+		5169F52CEB124E7583F43330 /* Cinzel-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD27AAFD5F7B4BB8B86AD2CF /* Cinzel-Bold.ttf */; };
+		590FA85E98C245D0A85E473C /* Cinzel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A40A14EA5AA4134A7FDF736 /* Cinzel-Regular.ttf */; };
+		E9AC545269F44EF19650B02E /* Cormorant-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD64AE6C640643E3BE34DE22 /* Cormorant-Bold.ttf */; };
+		9BA16BA6BC1A4095B586BE8F /* Cormorant-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E292A767F6E74D259960107A /* Cormorant-BoldItalic.ttf */; };
+		EE478743A3E3417B85A96535 /* Cormorant-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C43A71000424035997F86C2 /* Cormorant-Italic.ttf */; };
+		CA5786478DF04461BB255F79 /* Cormorant-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB7149E526A3472BA754EDD8 /* Cormorant-Light.ttf */; };
+		1DC97D74C28F4F59B30BF736 /* Cormorant-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08CB94AF5B824C28812B3834 /* Cormorant-LightItalic.ttf */; };
+		A918AD7B333C430C8A08CE34 /* Cormorant-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D3911BD477A41C59B98F8DF /* Cormorant-Medium.ttf */; };
+		C29B385CC67B436595FD7BCF /* Cormorant-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD45F9D84B54E0CA24B3ECD /* Cormorant-MediumItalic.ttf */; };
+		002C68E8FA274A4FB8D36E6A /* Cormorant-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5963842F05334BF6874B4BF1 /* Cormorant-Regular.ttf */; };
+		8EA49EE1D98E46C6BE352DBD /* Cormorant-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DF9E84101004D4297354A08 /* Cormorant-SemiBold.ttf */; };
+		6E24BEE97FCF434BAA7514AC /* Cormorant-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E71F5B31280F47E982C4703A /* Cormorant-SemiBoldItalic.ttf */; };
+		36266BEB334B426CB6C796B6 /* CormorantSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2CDE54A547D4C3AA95B1F01 /* CormorantSC-Bold.ttf */; };
+		BAB0D82A2CF447C7B46624CC /* CormorantSC-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2BFFC7F8AFB4369B6914FF6 /* CormorantSC-Light.ttf */; };
+		878C58B5B1DD43859AF6AC00 /* CormorantSC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47894542C30F4198A48B6876 /* CormorantSC-Medium.ttf */; };
+		DD1C801F2F64460BBC964373 /* CormorantSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE112B13415948ADA26A516E /* CormorantSC-Regular.ttf */; };
+		E8BC63BDE431405C802D1DE7 /* CormorantSC-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C42B21477A6849DEABB0B0A0 /* CormorantSC-SemiBold.ttf */; };
+		F6C277FCA84344909EF72602 /* HeadlandOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6062E6E6DBF54A6497AC9F54 /* HeadlandOne-Regular.ttf */; };
+		EEDC26F41D85409581BEB963 /* Kurale-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B965964CB004DA4AFC768E1 /* Kurale-Regular.ttf */; };
+		511D6627D9004581922CFD18 /* OldStandard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB858738FDF499F82D056D6 /* OldStandard-Bold.ttf */; };
+		EB0D1CC1C6404038926CC5E0 /* OldStandard-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3615F6AEA534820A4BCA695 /* OldStandard-Italic.ttf */; };
+		63DC8A1FA88B425AAC784D9F /* OldStandard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7946AEB13F2A45988DEDC9C7 /* OldStandard-Regular.ttf */; };
+		E4D7C99DF4E2439085353618 /* Vollkorn-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 978DD02652EC4BB0B1D456C5 /* Vollkorn-Black.ttf */; };
+		B8BA0BFF2F7F4932B290B8DB /* Vollkorn-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E099A9EBA1C84EC3A0107237 /* Vollkorn-BlackItalic.ttf */; };
+		F36F147515DA4B7D843C6986 /* Vollkorn-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 703CDE258D05404E80931207 /* Vollkorn-Bold.ttf */; };
+		BE28BB4DACD34B5D98D46110 /* Vollkorn-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED9446E4B994080A650F7CC /* Vollkorn-BoldItalic.ttf */; };
+		4F3B1537558B4EB9ACC44972 /* Vollkorn-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CC82918C4940C0AA2DF447 /* Vollkorn-Italic.ttf */; };
+		AD8D3103214B4336BD21750D /* Vollkorn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D6B220E2E444819AB59520 /* Vollkorn-Regular.ttf */; };
+		F1BC40E8AE8E4F868093A1EE /* Vollkorn-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1096974B2194D618C70A62F /* Vollkorn-SemiBold.ttf */; };
+		1798F2D1741A479E878912F9 /* Vollkorn-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4A49D0D8F54330BDCB1E0E /* Vollkorn-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +408,38 @@
 		6FF22FB14B7847DEA68BA9DB /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BC3FB6DB58D94D9EAF502C81 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2628B732EA934172BB812350 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A1237C0B929B427E83547053 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; name = "BreeSerif-Regular.ttf"; path = "../assets/fonts/BreeSerif-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		884CFC343C194D71A2F3C360 /* Cinzel-Black.ttf */ = {isa = PBXFileReference; name = "Cinzel-Black.ttf"; path = "../assets/fonts/Cinzel-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD27AAFD5F7B4BB8B86AD2CF /* Cinzel-Bold.ttf */ = {isa = PBXFileReference; name = "Cinzel-Bold.ttf"; path = "../assets/fonts/Cinzel-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6A40A14EA5AA4134A7FDF736 /* Cinzel-Regular.ttf */ = {isa = PBXFileReference; name = "Cinzel-Regular.ttf"; path = "../assets/fonts/Cinzel-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BD64AE6C640643E3BE34DE22 /* Cormorant-Bold.ttf */ = {isa = PBXFileReference; name = "Cormorant-Bold.ttf"; path = "../assets/fonts/Cormorant-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E292A767F6E74D259960107A /* Cormorant-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Cormorant-BoldItalic.ttf"; path = "../assets/fonts/Cormorant-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C43A71000424035997F86C2 /* Cormorant-Italic.ttf */ = {isa = PBXFileReference; name = "Cormorant-Italic.ttf"; path = "../assets/fonts/Cormorant-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB7149E526A3472BA754EDD8 /* Cormorant-Light.ttf */ = {isa = PBXFileReference; name = "Cormorant-Light.ttf"; path = "../assets/fonts/Cormorant-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		08CB94AF5B824C28812B3834 /* Cormorant-LightItalic.ttf */ = {isa = PBXFileReference; name = "Cormorant-LightItalic.ttf"; path = "../assets/fonts/Cormorant-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D3911BD477A41C59B98F8DF /* Cormorant-Medium.ttf */ = {isa = PBXFileReference; name = "Cormorant-Medium.ttf"; path = "../assets/fonts/Cormorant-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AFD45F9D84B54E0CA24B3ECD /* Cormorant-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Cormorant-MediumItalic.ttf"; path = "../assets/fonts/Cormorant-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5963842F05334BF6874B4BF1 /* Cormorant-Regular.ttf */ = {isa = PBXFileReference; name = "Cormorant-Regular.ttf"; path = "../assets/fonts/Cormorant-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3DF9E84101004D4297354A08 /* Cormorant-SemiBold.ttf */ = {isa = PBXFileReference; name = "Cormorant-SemiBold.ttf"; path = "../assets/fonts/Cormorant-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E71F5B31280F47E982C4703A /* Cormorant-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Cormorant-SemiBoldItalic.ttf"; path = "../assets/fonts/Cormorant-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B2CDE54A547D4C3AA95B1F01 /* CormorantSC-Bold.ttf */ = {isa = PBXFileReference; name = "CormorantSC-Bold.ttf"; path = "../assets/fonts/CormorantSC-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2BFFC7F8AFB4369B6914FF6 /* CormorantSC-Light.ttf */ = {isa = PBXFileReference; name = "CormorantSC-Light.ttf"; path = "../assets/fonts/CormorantSC-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		47894542C30F4198A48B6876 /* CormorantSC-Medium.ttf */ = {isa = PBXFileReference; name = "CormorantSC-Medium.ttf"; path = "../assets/fonts/CormorantSC-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CE112B13415948ADA26A516E /* CormorantSC-Regular.ttf */ = {isa = PBXFileReference; name = "CormorantSC-Regular.ttf"; path = "../assets/fonts/CormorantSC-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C42B21477A6849DEABB0B0A0 /* CormorantSC-SemiBold.ttf */ = {isa = PBXFileReference; name = "CormorantSC-SemiBold.ttf"; path = "../assets/fonts/CormorantSC-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6062E6E6DBF54A6497AC9F54 /* HeadlandOne-Regular.ttf */ = {isa = PBXFileReference; name = "HeadlandOne-Regular.ttf"; path = "../assets/fonts/HeadlandOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B965964CB004DA4AFC768E1 /* Kurale-Regular.ttf */ = {isa = PBXFileReference; name = "Kurale-Regular.ttf"; path = "../assets/fonts/Kurale-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6FB858738FDF499F82D056D6 /* OldStandard-Bold.ttf */ = {isa = PBXFileReference; name = "OldStandard-Bold.ttf"; path = "../assets/fonts/OldStandard-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E3615F6AEA534820A4BCA695 /* OldStandard-Italic.ttf */ = {isa = PBXFileReference; name = "OldStandard-Italic.ttf"; path = "../assets/fonts/OldStandard-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7946AEB13F2A45988DEDC9C7 /* OldStandard-Regular.ttf */ = {isa = PBXFileReference; name = "OldStandard-Regular.ttf"; path = "../assets/fonts/OldStandard-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		978DD02652EC4BB0B1D456C5 /* Vollkorn-Black.ttf */ = {isa = PBXFileReference; name = "Vollkorn-Black.ttf"; path = "../assets/fonts/Vollkorn-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E099A9EBA1C84EC3A0107237 /* Vollkorn-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Vollkorn-BlackItalic.ttf"; path = "../assets/fonts/Vollkorn-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		703CDE258D05404E80931207 /* Vollkorn-Bold.ttf */ = {isa = PBXFileReference; name = "Vollkorn-Bold.ttf"; path = "../assets/fonts/Vollkorn-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5ED9446E4B994080A650F7CC /* Vollkorn-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Vollkorn-BoldItalic.ttf"; path = "../assets/fonts/Vollkorn-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8CC82918C4940C0AA2DF447 /* Vollkorn-Italic.ttf */ = {isa = PBXFileReference; name = "Vollkorn-Italic.ttf"; path = "../assets/fonts/Vollkorn-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		70D6B220E2E444819AB59520 /* Vollkorn-Regular.ttf */ = {isa = PBXFileReference; name = "Vollkorn-Regular.ttf"; path = "../assets/fonts/Vollkorn-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A1096974B2194D618C70A62F /* Vollkorn-SemiBold.ttf */ = {isa = PBXFileReference; name = "Vollkorn-SemiBold.ttf"; path = "../assets/fonts/Vollkorn-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FA4A49D0D8F54330BDCB1E0E /* Vollkorn-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Vollkorn-SemiBoldItalic.ttf"; path = "../assets/fonts/Vollkorn-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,6 +723,38 @@
 				6FF22FB14B7847DEA68BA9DB /* FontAwesome5_Brands.ttf */,
 				BC3FB6DB58D94D9EAF502C81 /* FontAwesome5_Regular.ttf */,
 				2628B732EA934172BB812350 /* FontAwesome5_Solid.ttf */,
+				A1237C0B929B427E83547053 /* BreeSerif-Regular.ttf */,
+				884CFC343C194D71A2F3C360 /* Cinzel-Black.ttf */,
+				FD27AAFD5F7B4BB8B86AD2CF /* Cinzel-Bold.ttf */,
+				6A40A14EA5AA4134A7FDF736 /* Cinzel-Regular.ttf */,
+				BD64AE6C640643E3BE34DE22 /* Cormorant-Bold.ttf */,
+				E292A767F6E74D259960107A /* Cormorant-BoldItalic.ttf */,
+				9C43A71000424035997F86C2 /* Cormorant-Italic.ttf */,
+				BB7149E526A3472BA754EDD8 /* Cormorant-Light.ttf */,
+				08CB94AF5B824C28812B3834 /* Cormorant-LightItalic.ttf */,
+				8D3911BD477A41C59B98F8DF /* Cormorant-Medium.ttf */,
+				AFD45F9D84B54E0CA24B3ECD /* Cormorant-MediumItalic.ttf */,
+				5963842F05334BF6874B4BF1 /* Cormorant-Regular.ttf */,
+				3DF9E84101004D4297354A08 /* Cormorant-SemiBold.ttf */,
+				E71F5B31280F47E982C4703A /* Cormorant-SemiBoldItalic.ttf */,
+				B2CDE54A547D4C3AA95B1F01 /* CormorantSC-Bold.ttf */,
+				A2BFFC7F8AFB4369B6914FF6 /* CormorantSC-Light.ttf */,
+				47894542C30F4198A48B6876 /* CormorantSC-Medium.ttf */,
+				CE112B13415948ADA26A516E /* CormorantSC-Regular.ttf */,
+				C42B21477A6849DEABB0B0A0 /* CormorantSC-SemiBold.ttf */,
+				6062E6E6DBF54A6497AC9F54 /* HeadlandOne-Regular.ttf */,
+				9B965964CB004DA4AFC768E1 /* Kurale-Regular.ttf */,
+				6FB858738FDF499F82D056D6 /* OldStandard-Bold.ttf */,
+				E3615F6AEA534820A4BCA695 /* OldStandard-Italic.ttf */,
+				7946AEB13F2A45988DEDC9C7 /* OldStandard-Regular.ttf */,
+				978DD02652EC4BB0B1D456C5 /* Vollkorn-Black.ttf */,
+				E099A9EBA1C84EC3A0107237 /* Vollkorn-BlackItalic.ttf */,
+				703CDE258D05404E80931207 /* Vollkorn-Bold.ttf */,
+				5ED9446E4B994080A650F7CC /* Vollkorn-BoldItalic.ttf */,
+				F8CC82918C4940C0AA2DF447 /* Vollkorn-Italic.ttf */,
+				70D6B220E2E444819AB59520 /* Vollkorn-Regular.ttf */,
+				A1096974B2194D618C70A62F /* Vollkorn-SemiBold.ttf */,
+				FA4A49D0D8F54330BDCB1E0E /* Vollkorn-SemiBoldItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1124,6 +1220,38 @@
 				B1F271CBD65445E6B6949CB5 /* FontAwesome5_Brands.ttf in Resources */,
 				B96C078B54AC4847AFB82BD6 /* FontAwesome5_Regular.ttf in Resources */,
 				196E355A212245FEBE5A68E4 /* FontAwesome5_Solid.ttf in Resources */,
+				043ED4CFDC984006863FF332 /* BreeSerif-Regular.ttf in Resources */,
+				DBFF2C4CD64148BB85EFA859 /* Cinzel-Black.ttf in Resources */,
+				5169F52CEB124E7583F43330 /* Cinzel-Bold.ttf in Resources */,
+				590FA85E98C245D0A85E473C /* Cinzel-Regular.ttf in Resources */,
+				E9AC545269F44EF19650B02E /* Cormorant-Bold.ttf in Resources */,
+				9BA16BA6BC1A4095B586BE8F /* Cormorant-BoldItalic.ttf in Resources */,
+				EE478743A3E3417B85A96535 /* Cormorant-Italic.ttf in Resources */,
+				CA5786478DF04461BB255F79 /* Cormorant-Light.ttf in Resources */,
+				1DC97D74C28F4F59B30BF736 /* Cormorant-LightItalic.ttf in Resources */,
+				A918AD7B333C430C8A08CE34 /* Cormorant-Medium.ttf in Resources */,
+				C29B385CC67B436595FD7BCF /* Cormorant-MediumItalic.ttf in Resources */,
+				002C68E8FA274A4FB8D36E6A /* Cormorant-Regular.ttf in Resources */,
+				8EA49EE1D98E46C6BE352DBD /* Cormorant-SemiBold.ttf in Resources */,
+				6E24BEE97FCF434BAA7514AC /* Cormorant-SemiBoldItalic.ttf in Resources */,
+				36266BEB334B426CB6C796B6 /* CormorantSC-Bold.ttf in Resources */,
+				BAB0D82A2CF447C7B46624CC /* CormorantSC-Light.ttf in Resources */,
+				878C58B5B1DD43859AF6AC00 /* CormorantSC-Medium.ttf in Resources */,
+				DD1C801F2F64460BBC964373 /* CormorantSC-Regular.ttf in Resources */,
+				E8BC63BDE431405C802D1DE7 /* CormorantSC-SemiBold.ttf in Resources */,
+				F6C277FCA84344909EF72602 /* HeadlandOne-Regular.ttf in Resources */,
+				EEDC26F41D85409581BEB963 /* Kurale-Regular.ttf in Resources */,
+				511D6627D9004581922CFD18 /* OldStandard-Bold.ttf in Resources */,
+				EB0D1CC1C6404038926CC5E0 /* OldStandard-Italic.ttf in Resources */,
+				63DC8A1FA88B425AAC784D9F /* OldStandard-Regular.ttf in Resources */,
+				E4D7C99DF4E2439085353618 /* Vollkorn-Black.ttf in Resources */,
+				B8BA0BFF2F7F4932B290B8DB /* Vollkorn-BlackItalic.ttf in Resources */,
+				F36F147515DA4B7D843C6986 /* Vollkorn-Bold.ttf in Resources */,
+				BE28BB4DACD34B5D98D46110 /* Vollkorn-BoldItalic.ttf in Resources */,
+				4F3B1537558B4EB9ACC44972 /* Vollkorn-Italic.ttf in Resources */,
+				AD8D3103214B4336BD21750D /* Vollkorn-Regular.ttf in Resources */,
+				F1BC40E8AE8E4F868093A1EE /* Vollkorn-SemiBold.ttf in Resources */,
+				1798F2D1741A479E878912F9 /* Vollkorn-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

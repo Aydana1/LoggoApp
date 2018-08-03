@@ -11,6 +11,8 @@ import {
 } from "react-native";
 
 import { Button, Card, Title, Paragraph } from "react-native-paper";
+import FontAwesome from "react-native-vector-icons/dist/FontAwesome";
+import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
 
 export default class Welcome extends Component {
   render() {
@@ -26,6 +28,9 @@ export default class Welcome extends Component {
         }}
       >
         <Text style={{ color: "white" }}>Добро пожаловать!</Text>
+
+        {/* <FontAwesome name="fas fa-microphone-alt" size={25} color="#29B6F6" />
+      <MaterialIcons name="record_voice_over" size={25} color="#29B6F6" /> */}
         <Button
           style={{ backgroundColor: "white" }}
           raised

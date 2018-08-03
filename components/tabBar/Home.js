@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import {
   createBottomTabNavigator,
   TabBarBottom,
@@ -10,11 +10,25 @@ import Icon from "react-native-vector-icons/Ionicons";
 class Home extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>HOME</Text>
+      <View style={styles.container}>
+        <Text
+          style={{
+            color: "white"
+          }}
+        >
+          HOME
+        </Text>
       </View>
     );
   }
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#CFD8DC"
+  }
+});
 export default Home;
