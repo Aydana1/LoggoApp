@@ -9,6 +9,7 @@ import {
   ScrollView,
   AppRegistry,
   TouchableHighlight,
+  ActivityIndicator,
   TextInput
 } from "react-native";
 
@@ -23,62 +24,59 @@ export default class Welcome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground
+        {/* <ImageBackground
           style={styles.wall}
           source={require("../assets/images/wall.png")}
           imageStyle={{ resizeMode: "cover" }}
-        >
+        > */}
+
+        {/* {({ loading }) => {
+          return loading ? (
+            <ActivityIndicator />
+          ) : (
+            <View> */}
+        <View>
           <Image
-            style={{ width: 100, height: 120 }}
-            source={require("../assets/images/logo3.png")}
+            style={{ width: 100, height: 85 }}
+            source={require("../assets/images/thelogo7.png")}
           />
           <Text
             style={{
-              color: "white",
-              fontSize: 20,
-              fontFamily: "CormorantInfant-Bold",
-              marginTop: 20
+              fontFamily: "RobotoCondensed-Bold",
+              fontSize: 24,
+              color: "white"
             }}
           >
-            Добро пожаловать!
+            SpeechArt
           </Text>
+        </View>
+        <Text
+          style={{
+            color: "white",
+            fontSize: 20,
+            fontFamily: "Roboto-Bold",
+            marginTop: 20,
+            textAlign: "center"
+          }}
+        >
+          Озвучивайте скороговорки и тренируйте речь!
+        </Text>
 
-          {/* <View>
-            <Text
-              style={{
-                color: "white",
-                fontSize: 15,
-                marginBottom: 10
-              }}
-            >
-              Как вас зовут?
-            </Text>
+        <Button
+          style={{
+            backgroundColor: "white"
+          }}
+          raised
+          color="#0CD78E"
+          onPress={() => this.props.navigation.navigate("AppGuide")}
+        >
+          Go!
+        </Button>
+        {/* </View>
+          );
+        }} */}
 
-            <TextInput
-              label="Name"
-              value={this.state.name}
-              onChangeText={name => this.setState({ name })}
-              placeholder="Ваше имя"
-              style={{
-                width: 300,
-                backgroundColor: "white"
-              }}
-            />
-          </View> */}
-
-          {/* <FontAwesome name="fas fa-microphone-alt" size={25} color="#29B6F6" />
-      <MaterialIcons name="record_voice_over" size={25} color="#29B6F6" /> */}
-          <Button
-            style={{
-              backgroundColor: "white"
-            }}
-            raised
-            color="#4A148C"
-            onPress={() => this.props.navigation.navigate("AppGuide")}
-          >
-            Войти
-          </Button>
-        </ImageBackground>
+        {/* </ImageBackground> */}
       </View>
     );
   }
@@ -97,6 +95,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#0CD78E"
   }
 });

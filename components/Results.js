@@ -8,23 +8,92 @@ import {
   ScrollView,
   AppRegistry,
   TouchableHighlight,
-  StatusBar
+  StatusBar,
+  FlatList
 } from "react-native";
 import { Button, Card, Title, Paragraph } from "react-native-paper";
 import CardContent from "../node_modules/react-native-paper/src/components/Card/CardContent";
 import CardCover from "../node_modules/react-native-paper/src/components/Card/CardCover";
+var jsdiff = require("diff");
 
-//{ backgroundColor: "#4A148C", height: 660 }
+var result = [];
 
 export default class Results extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <ImageBackground
-          style={styles.wall}
-          source={require("../assets/images/res.png")}
-          imageStyle={{ resizeMode: "cover" }}
+  highlight = () => {
+    const { poem_filtered, results } = this.props.navigation.state.params;
+
+    const diff = jsdiff.diffChars(poem_filtered.toLowerCase(), results);
+    diff.forEach(part => {
+      console.log("part: ", part);
+      result = [
+        ...result,
+        { word: part.value, added: part.added, removed: part.removed }
+      ];
+    });
+    console.log("OUTPUTS: ", result);
+  };
+
+  renderItem = ({ item }) => {
+    const str = item.word;
+    const arr = [];
+    arr.push(str + " ");
+    if (item.added) {
+      return (
+        <Paragraph
+          style={{
+            color: "green",
+            fontFamily: "RobotoCondensed-Regular",
+            fontSize: 18
+          }}
         >
+          {arr}
+        </Paragraph>
+      );
+    } else if (item.removed) {
+      return (
+        <Paragraph
+          style={{
+            color: "orange",
+            fontFamily: "RobotoCondensed-Regular",
+            fontSize: 18
+          }}
+        >
+          {arr}
+        </Paragraph>
+      );
+    } else {
+      return (
+        <Paragraph
+          style={{
+            color: "black",
+            fontFamily: "RobotoCondensed-Regular",
+            fontSize: 18
+          }}
+        >
+          {arr}
+        </Paragraph>
+      );
+    }
+  };
+
+  render() {
+    const {
+      value,
+      points,
+      matched,
+      not_matched
+    } = this.props.navigation.state.params;
+
+    this.highlight();
+
+    return (
+      <ScrollView
+        style={{
+          height: 700,
+          backgroundColor: "#E5E5E5"
+        }}
+      >
+        <View style={styles.container}>
           <StatusBar
             translucent
             backgroundColor="rgba(0, 0, 0, 0.20)"
@@ -35,99 +104,92 @@ export default class Results extends React.Component {
               style={{
                 textAlign: "center",
                 fontSize: 25,
-                fontFamily: "OldStandard-Regular",
-
-                color: "white",
-                marginBottom: 20
+                fontFamily: "RobotoCondensed-Regular",
+                color: "#0CD78E",
+                marginBottom: 10,
+                textDecorationLine: "underline"
               }}
             >
               Ваш результат:
             </Text>
 
-            <Card
+            <View
               style={{
-                width: 300
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: 30
               }}
             >
-              <CardContent style={{ backgroundColor: "white" }}>
-                <Paragraph
+              <Card
+                style={{
+                  width: 200
+                }}
+              >
+                <CardContent
                   style={{
-                    color: "#311B92",
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontFamily: "Kurale-Regular"
+                    backgroundColor: "white"
                   }}
                 >
-                  Точность: 70%
-                </Paragraph>
-                <Paragraph
-                  style={{
-                    color: "#311B92",
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontFamily: "Kurale-Regular"
-                  }}
-                >
-                  Время: 20сек
-                </Paragraph>
+                  <Paragraph
+                    style={{
+                      color: "black",
+                      textAlign: "center",
+                      fontSize: 20,
+                      fontFamily: "RobotoCondensed-Regular"
+                    }}
+                  >
+                    Точность: {value}%
+                  </Paragraph>
+                </CardContent>
+              </Card>
+            </View>
+
+            <Card
+              style={{
+                width: 300,
+                height: 100
+              }}
+            >
+              <CardContent>
+                <FlatList
+                  horizontal
+                  data={result}
+                  renderItem={this.renderItem}
+                  keyExtractor={(item, index) => index.toString()}
+                />
               </CardContent>
             </Card>
           </View>
 
-          <Card
-            style={{
-              width: 330
-            }}
-          >
-            <CardContent style={{ backgroundColor: "white" }}>
-              <Paragraph
-                style={{
-                  color: "#311B92",
-                  textAlign: "center",
-                  fontSize: 18,
-                  fontFamily: "Kurale-Regular"
-                }}
-              >
-                Количество правильных слов: 8
-              </Paragraph>
-              <Paragraph
-                style={{
-                  color: "#311B92",
-                  textAlign: "center",
-                  fontSize: 18,
-                  fontFamily: "Kurale-Regular"
-                }}
-              >
-                Количество неправильных слов: 3
-              </Paragraph>
-            </CardContent>
-          </Card>
+          <View style={{ flexDirection: "row", marginBottom: 10 }}>
+            <Button
+              style={{
+                backgroundColor: "#0CD78E",
+                width: 150,
+                marginRight: 10
+              }}
+              compact
+              color="white"
+              onPress={() => this.props.navigation.goBack()}
+            >
+              Повторить
+            </Button>
 
-          <Text
-            style={{
-              color: "#311B92",
-              textAlign: "center",
-              fontFamily: "Kurale-Regular",
-              fontSize: 20,
-              marginTop: 40
-            }}
-          >
-            Вы заработали 100 баллов!
-          </Text>
-
-          <Button
-            style={{
-              backgroundColor: "white",
-              width: 150
-            }}
-            compact
-            color="#4A148C"
-            onPress={() => this.props.navigation.goBack()}
-          >
-            Повторить
-          </Button>
-        </ImageBackground>
-      </View>
+            <Button
+              style={{
+                backgroundColor: "#0CD78E",
+                width: 150,
+                marginLeft: 10
+              }}
+              compact
+              color="white"
+              onPress={() => this.props.navigation.navigate("AppGuide")}
+            >
+               Следующий
+            </Button>
+          </View>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -137,25 +199,22 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70
   },
-  // container: {
-  //   flex: 1,
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  //   backgroundColor: "#F5FCFF"
-  // },
+
   wall: {
     width: 400,
-    height: 660,
+    height: 700,
     flex: 1,
     justifyContent: "space-around",
     alignItems: "center"
   },
   container: {
-    height: 660,
+    height: 700,
     flex: 1,
     flexDirection: "column",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#E5E5E5"
+    // E5E5E5, CFD8DC
   }
 });
 

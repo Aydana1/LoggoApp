@@ -25,7 +25,8 @@ export default class VoiceTest extends React.Component {
       started: "",
       results: [],
       partialResults: [],
-      words: []
+      words: [],
+      buttonStateHolder: true //must be true
     };
     Voice.onSpeechStart = this.onSpeechStart.bind(this);
     Voice.onSpeechRecognized = this.onSpeechRecognized.bind(this);
@@ -68,8 +69,11 @@ export default class VoiceTest extends React.Component {
     this.setState({
       results: e.value[0]
     });
-    const words = e.value[0].spit(" ");
+    const words = e.value[0].split(" ");
     this.setState({ words });
+    if (e.value[0] != "") {
+      this.setState({ buttonStateHolder: false });
+    }
     console.log("RESULT: ", e.value[0]);
     console.log("WORDS: ", words);
   }
@@ -137,98 +141,138 @@ export default class VoiceTest extends React.Component {
     });
   }
 
-  showResults = () => {
-    this.props.navigation.navigate("Results");
+  showResults = ({
+    value,
+    points,
+    matched,
+    not_matched,
+    poem_filtered,
+    results
+  }) => {
+    console.log("POINTS ", points);
+    this.props.navigation.navigate("Results", {
+      value,
+      points,
+      matched,
+      not_matched,
+      poem_filtered,
+      results
+    });
   };
 
   render() {
     const { currentLevel } = this.props.navigation.state.params;
     const { info, backgroundColor } = currentLevel;
-    console.log("backgroundColor", backgroundColor);
     const { poem, level, img } = info;
 
     const poem_filtered = poem.replace(/[\.\,]/g, "");
     const terms = poem_filtered.split(" ");
+    const color = backgroundColor;
+    const results = this.state.results;
 
-    // const results = this.state.results.map(result => {
-    //   const words = result.split(" "); //removing spaces between words and storing them in an array
+    var matched = 0;
+    var not_matched = 0;
+    for (var i = 0; i < poem_filtered.length; ++i) {
+      if (this.state.words[i] != undefined && terms[i] != undefined) {
+        if (this.state.words[i].toLowerCase() === terms[i].toLowerCase()) {
+          matched++;
+        } else {
+          not_matched++;
+        }
+      }
+    }
+    const score = (matched / terms.length) * 100;
+    const value = Math.round(score * 100) / 100;
 
-    console.log("RRRRRR ", this.state.results);
-
-    // var matched = 0;
-    // var not_matched = 0;
-
-    // for (var i = 0; i < poem_filtered.length; ++i) {
-    //   // console.log(words[i], terms[i]);
-    //   if (words[i] != undefined && terms[i] != undefined) {
-    //     if (words[i].toLowerCase() === terms[i].toLowerCase()) {
-    //       matched++;
-    //       console.log(matched);
-    //     } else {
-    //       not_matched++;
-    //     }
-    //   }
-    // }
-    // var score = (matched / terms.length) * 100;
-    // console.log("YOUR SCORE ", score);
-    // });
-
+    var points = 0;
+    if (value <= 40 && value >= 20) {
+      points += 10;
+    } else if (value >= 40 && value <= 60) {
+      points += 20;
+    } else if (value >= 60 && value <= 80) {
+      points += 30;
+    } else if (value >= 80 && value <= 90) {
+      points += 40;
+    } else if (value >= 90) {
+      points += 50;
+    } else if (value <= 20) {
+      points += 5;
+    }
     return (
-      <ScrollView>
+      <ScrollView
+        style={{
+          height: 700,
+          backgroundColor: "#E0F7FA"
+        }}
+      >
         <StatusBar translucent backgroundColor="rgba(0, 0, 0, 0.20)" animated />
         <View style={styles.container}>
-          <Text style={styles.text}>Уровень {level}</Text>
+          <View>
+            <Text style={styles.text}>Уровень {level}</Text>
 
-          <Card
-            style={{
-              width: 300
-            }}
-          >
-            <CardContent style={[styles.cardContent, { backgroundColor }]}>
-              <Paragraph style={styles.card}>{poem}</Paragraph>
-            </CardContent>
-            <CardCover style={styles.image} source={img} />
-          </Card>
-
+            <Card
+              style={{
+                width: 300
+              }}
+            >
+              <CardContent style={styles.cardContent}>
+                <Paragraph style={styles.card}>{poem}</Paragraph>
+              </CardContent>
+              <CardCover style={styles.image} source={img} />
+            </Card>
+          </View>
           <View
             style={{
-              flexDirection: "row",
+              justifyContent: "center",
               alignItems: "center"
             }}
           >
             <TouchableHighlight onPress={this._startRecognizing.bind(this)}>
               <Image
                 style={styles.button}
-                source={require("../microphone.png")}
+                source={require("../assets/images/recorder.png")}
               />
             </TouchableHighlight>
 
-            <Button
+            <Text
               style={{
-                backgroundColor: "#29B6F6",
-                width: 120,
-                height: 40,
-                marginLeft: 90
+                color: "#00BFA5",
+                fontFamily: "Roboto-Regular",
+                borderBottomWidth: 0.3,
+                borderBottomColor: "#33691E",
+                paddingBottom: 30,
+                width: 360,
+                textAlign: "center"
               }}
-              raised
-              color="white"
-              onPress={this._stopRecognizing.bind(this)}
             >
-              Stop
-            </Button>
-          </View>
+              Нажмите на микрофон и начните читать
+            </Text>
 
-          <Text style={styles.text}>Ваша речь:</Text>
-          <Card style={{ width: 300 }}>
-            <CardContent style={styles.cardContent}>
-              <Paragraph style={styles.card}>{this.state.results}</Paragraph>
-            </CardContent>
-          </Card>
+            <Text style={styles.text}>Ваша речь:</Text>
+            <Card style={{ width: 300 }}>
+              <CardContent style={styles.cardContent}>
+                <Paragraph style={styles.card}>{this.state.results}</Paragraph>
+              </CardContent>
+            </Card>
+          </View>
           <Button
-            style={{ backgroundColor: "#FFAB40", width: 150 }}
+            style={{
+              backgroundColor: "#0CD78E",
+              width: 150
+            }}
             color="white"
             compact
-            onPress={this.showResults}
+            disabled={this.state.buttonStateHolder}
+            onPress={() =>
+              this.showResults({
+                value,
+                points,
+                matched,
+                not_matched,
+                poem_filtered,
+                results
+              })
+            }
           >
             Результаты
           </Button>
@@ -238,39 +282,43 @@ export default class VoiceTest extends React.Component {
   }
 }
 
+//#FFAB40
+
 const styles = StyleSheet.create({
   image: {
     resizeMode: "contain"
   },
   button: {
     width: 70,
-    height: 70
+    height: 65,
+    marginBottom: 10
   },
   container: {
     flex: 1,
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "#CFD8DC",
-    height: 660
+    backgroundColor: "#E0F7FA",
+    height: 700
   },
   card: {
-    color: "white",
+    color: "#227033",
+    // was #227033
     textAlign: "center",
-    // fontFamily: "Cormorant-Regular",
-    fontFamily: "Kurale-Regular",
-
-    fontSize: 20
+    fontFamily: "Roboto-Regular",
+    fontSize: 18
   },
   cardContent: {
-    backgroundColor: "#C2185B"
+    backgroundColor: "white"
   },
   text: {
     textAlign: "center",
-    fontSize: 20,
-    fontFamily: "CormorantInfant-Bold",
-    color: "#C2185B",
-    marginTop: 20
+    fontSize: 24,
+    fontFamily: "RobotoCondensed-Bold",
+    color: "#0CD78E",
+    marginBottom: 10,
+    marginTop: 30,
+    textDecorationLine: "underline"
   }
 });
 //OldStandard-Regular
