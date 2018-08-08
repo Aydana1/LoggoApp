@@ -146,6 +146,16 @@
 		<string>Philosopher-BoldItalic.ttf</string>
 		<string>Philosopher-Italic.ttf</string>
 		<string>Philosopher-Regular.ttf</string>
+		<string>Alegreya-Black.ttf</string>
+		<string>Alegreya-BlackItalic.ttf</string>
+		<string>Alegreya-Bold.ttf</string>
+		<string>Alegreya-BoldItalic.ttf</string>
+		<string>Alegreya-ExtraBold.ttf</string>
+		<string>Alegreya-ExtraBoldItalic.ttf</string>
+		<string>Alegreya-Italic.ttf</string>
+		<string>Alegreya-Medium.ttf</string>
+		<string>Alegreya-MediumItalic.ttf</string>
+		<string>Alegreya-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

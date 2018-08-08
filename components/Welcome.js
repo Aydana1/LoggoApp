@@ -16,6 +16,7 @@ import {
 import { Button, Card, Title, Paragraph } from "react-native-paper";
 import FontAwesome from "react-native-vector-icons/dist/FontAwesome";
 import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
+import EvilIcons from "react-native-vector-icons/dist/EvilIcons";
 
 export default class Welcome extends Component {
   state = {
@@ -64,15 +65,21 @@ export default class Welcome extends Component {
 
         <Button
           style={{
-            backgroundColor: "white"
+            backgroundColor: "white",
+            padding: 5,
+            width: 150,
+            justifyContent: "center",
+            alignItems: "center"
           }}
           raised
           color="#0CD78E"
-          onPress={() => this.props.navigation.navigate("AppGuide")}
+          onPress={() => this.props.navigation.navigate("CardView")}
         >
           Go!
+          {/* <MaterialIcons name="chevron_right" size={25} color="#0CD78E" /> */}
+          {/* <EvilIcons name="ei-arrow-right" size={25} color="#0CD78E" /> */}
         </Button>
-        {/* </View>
+        {/* </View> 
           );
         }} */}
 

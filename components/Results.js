@@ -42,7 +42,7 @@ export default class Results extends React.Component {
         <Paragraph
           style={{
             color: "green",
-            fontFamily: "RobotoCondensed-Regular",
+            fontFamily: "Philosophy-Regular",
             fontSize: 18
           }}
         >
@@ -54,7 +54,7 @@ export default class Results extends React.Component {
         <Paragraph
           style={{
             color: "orange",
-            fontFamily: "RobotoCondensed-Regular",
+            fontFamily: "Philosophy-Regular",
             fontSize: 18
           }}
         >
@@ -66,7 +66,7 @@ export default class Results extends React.Component {
         <Paragraph
           style={{
             color: "black",
-            fontFamily: "RobotoCondensed-Regular",
+            fontFamily: "Philosophy-Regular",
             fontSize: 18
           }}
         >
@@ -90,29 +90,16 @@ export default class Results extends React.Component {
       <ScrollView
         style={{
           height: 700,
-          backgroundColor: "#E5E5E5"
+          backgroundColor: "#F5FCFF"
         }}
       >
         <View style={styles.container}>
-          <StatusBar
+          {/* <StatusBar
             translucent
             backgroundColor="rgba(0, 0, 0, 0.20)"
             animated
-          />
+          /> */}
           <View>
-            <Text
-              style={{
-                textAlign: "center",
-                fontSize: 25,
-                fontFamily: "RobotoCondensed-Regular",
-                color: "#0CD78E",
-                marginBottom: 10,
-                textDecorationLine: "underline"
-              }}
-            >
-              Ваш результат:
-            </Text>
-
             <View
               style={{
                 justifyContent: "space-between",
@@ -132,10 +119,10 @@ export default class Results extends React.Component {
                 >
                   <Paragraph
                     style={{
-                      color: "black",
+                      color: "#00B8D4",
                       textAlign: "center",
                       fontSize: 20,
-                      fontFamily: "RobotoCondensed-Regular"
+                      fontFamily: "Philosophy-Regular"
                     }}
                   >
                     Точность: {value}%
@@ -161,7 +148,7 @@ export default class Results extends React.Component {
             </Card>
           </View>
 
-          <View style={{ flexDirection: "row", marginBottom: 10 }}>
+          <View style={{ flexDirection: "row", marginBottom: 40 }}>
             <Button
               style={{
                 backgroundColor: "#0CD78E",
@@ -199,21 +186,13 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70
   },
-
-  wall: {
-    width: 400,
-    height: 700,
-    flex: 1,
-    justifyContent: "space-around",
-    alignItems: "center"
-  },
   container: {
     height: 700,
     flex: 1,
     flexDirection: "column",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#E5E5E5"
+    backgroundColor: "#F5FCFF"
     // E5E5E5, CFD8DC
   }
 });

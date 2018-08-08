@@ -14,6 +14,18 @@ import CardContent from "../node_modules/react-native-paper/src/components/Card/
 import CardCover from "../node_modules/react-native-paper/src/components/Card/CardCover";
 import Voice from "react-native-voice";
 
+import {
+  BallIndicator,
+  BarIndicator,
+  DotIndicator,
+  MaterialIndicator,
+  PacmanIndicator,
+  PulseIndicator,
+  SkypeIndicator,
+  UIActivityIndicator,
+  WaveIndicator
+} from "react-native-indicators";
+
 export default class VoiceTest extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +38,8 @@ export default class VoiceTest extends React.Component {
       results: [],
       partialResults: [],
       words: [],
-      buttonStateHolder: true //must be true
+      buttonStateHolder: false, //must be true,
+      startSpeech: false
     };
     Voice.onSpeechStart = this.onSpeechStart.bind(this);
     Voice.onSpeechRecognized = this.onSpeechRecognized.bind(this);
@@ -88,9 +101,10 @@ export default class VoiceTest extends React.Component {
     this.setState({
       pitch: e.value
     });
+    console.log("PITCH: ", e.value);
   }
 
-  async _startRecognizing(e) {
+  startRecognizing = async e => {
     this.setState({
       recognized: "",
       pitch: "",
@@ -98,7 +112,8 @@ export default class VoiceTest extends React.Component {
       started: "",
       results: [],
       partialResults: [],
-      end: ""
+      end: "",
+      startSpeech: true
     });
 
     try {
@@ -106,7 +121,7 @@ export default class VoiceTest extends React.Component {
     } catch (e) {
       console.error(e);
     }
-  }
+  };
 
   async _stopRecognizing(e) {
     try {
@@ -202,14 +217,13 @@ export default class VoiceTest extends React.Component {
       <ScrollView
         style={{
           height: 700,
-          backgroundColor: "#E0F7FA"
+          backgroundColor: "#E5E5E5"
         }}
       >
         <StatusBar translucent backgroundColor="rgba(0, 0, 0, 0.20)" animated />
         <View style={styles.container}>
           <View>
             <Text style={styles.text}>Уровень {level}</Text>
-
             <Card
               style={{
                 width: 300
@@ -221,25 +235,33 @@ export default class VoiceTest extends React.Component {
               <CardCover style={styles.image} source={img} />
             </Card>
           </View>
+
           <View
             style={{
               justifyContent: "center",
               alignItems: "center"
             }}
           >
-            <TouchableHighlight onPress={this._startRecognizing.bind(this)}>
+            {/* <Text>{this.state.pitch}</Text> */}
+
+            <TouchableHighlight onPress={this.startRecognizing}>
+              {/* {this.state.pitch ? (
+                <BarIndicator color="blue" count={7} size={20} />
+              ) : ( */}
               <Image
                 style={styles.button}
                 source={require("../assets/images/recorder.png")}
               />
+              {/* )} */}
             </TouchableHighlight>
 
             <Text
               style={{
                 color: "#00BFA5",
-                fontFamily: "Roboto-Regular",
+                //#00BFA5
+                fontFamily: "Forum-Regular",
                 borderBottomWidth: 0.3,
-                borderBottomColor: "#33691E",
+                borderBottomColor: "#227033",
                 paddingBottom: 30,
                 width: 360,
                 textAlign: "center"
@@ -247,7 +269,6 @@ export default class VoiceTest extends React.Component {
             >
               Нажмите на микрофон и начните читать
             </Text>
-
             <Text style={styles.text}>Ваша речь:</Text>
             <Card style={{ width: 300 }}>
               <CardContent style={styles.cardContent}>
@@ -255,6 +276,7 @@ export default class VoiceTest extends React.Component {
               </CardContent>
             </Card>
           </View>
+
           <Button
             style={{
               backgroundColor: "#0CD78E",
@@ -298,15 +320,16 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "#E0F7FA",
+    backgroundColor: "#F5FCFF",
+    //#E0F7FA
     height: 700
   },
   card: {
     color: "#227033",
     // was #227033
     textAlign: "center",
-    fontFamily: "Roboto-Regular",
-    fontSize: 18
+    fontFamily: "Forum-Regular",
+    fontSize: 20
   },
   cardContent: {
     backgroundColor: "white"

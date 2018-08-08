@@ -16,6 +16,7 @@ import Results from "./components/Results";
 import Home from "./components/tabBar/Home";
 import Profile from "./components/tabBar/Profile";
 import Timer from "./components/Timer";
+import CardView from "./components/CardView";
 
 console.disableYellowBox = true;
 
@@ -108,12 +109,23 @@ const RootStack = createStackNavigator(
     Results: {
       screen: Results,
       navigationOptions: ({ navigation }) => ({
-        headerLeft: null,
-        header: null
+        title: "Ваш результат",
+        headerTintColor: "white",
+        headerStyle: {
+          height: 60,
+          backgroundColor: "#0CD78E",
+          marginTop: 15
+        },
+        headerTitleStyle: {
+          textAlign: "center"
+        }
+
+        // headerLeft: null,
+        // header: null
       })
     },
-    Timer: {
-      screen: Timer,
+    CardView: {
+      screen: CardView,
       navigationOptions: ({ navigation }) => ({
         headerLeft: null,
         header: null

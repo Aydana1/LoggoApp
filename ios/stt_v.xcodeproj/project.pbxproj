@@ -132,6 +132,16 @@
 		3FF0AE86D5184D098C983CAE /* Philosopher-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D83911E02408EAF671CAD /* Philosopher-BoldItalic.ttf */; };
 		391CCAB211D747ACAF0D0573 /* Philosopher-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD90EF4228D4077978C9A64 /* Philosopher-Italic.ttf */; };
 		28510E9B244F4DCBA0B38BBE /* Philosopher-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77539208F46C44F9B9CEA2CB /* Philosopher-Regular.ttf */; };
+		BF41A1F792E846D48A6F392C /* Alegreya-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DED187E0EB3C4AB2963DD872 /* Alegreya-Black.ttf */; };
+		668A809361364CA3BB4BB519 /* Alegreya-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FA335000E1C415C8321AC59 /* Alegreya-BlackItalic.ttf */; };
+		4A6B1C6B53E94CDFBB9DD382 /* Alegreya-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DB406C302964C9CBB0CC8D7 /* Alegreya-Bold.ttf */; };
+		620119F55A3D4D9A90D8C3D6 /* Alegreya-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E424E33C51834B8A848540BB /* Alegreya-BoldItalic.ttf */; };
+		F324AB7D0573452ABF7BD3BE /* Alegreya-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184B6D1CEE914C9BB99E196A /* Alegreya-ExtraBold.ttf */; };
+		32F45D5F1BA4490290065450 /* Alegreya-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9242051B3D34413AAC47BA8 /* Alegreya-ExtraBoldItalic.ttf */; };
+		E4A741D9CF644C4991D172D9 /* Alegreya-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59DF22242461479C89358FF9 /* Alegreya-Italic.ttf */; };
+		53D092E07FBF4670926034DA /* Alegreya-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83576BA63B4E4B3E98B1E124 /* Alegreya-Medium.ttf */; };
+		03404F50DE2E46EF811ABAB3 /* Alegreya-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E91BF893543A4810E32CB /* Alegreya-MediumItalic.ttf */; };
+		40C5CF01E5984363A1773DA4 /* Alegreya-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8B243514843048DA9F0F8 /* Alegreya-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -534,6 +544,16 @@
 		9D0D83911E02408EAF671CAD /* Philosopher-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Philosopher-BoldItalic.ttf"; path = "../assets/fonts/Philosopher-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7CD90EF4228D4077978C9A64 /* Philosopher-Italic.ttf */ = {isa = PBXFileReference; name = "Philosopher-Italic.ttf"; path = "../assets/fonts/Philosopher-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		77539208F46C44F9B9CEA2CB /* Philosopher-Regular.ttf */ = {isa = PBXFileReference; name = "Philosopher-Regular.ttf"; path = "../assets/fonts/Philosopher-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DED187E0EB3C4AB2963DD872 /* Alegreya-Black.ttf */ = {isa = PBXFileReference; name = "Alegreya-Black.ttf"; path = "../assets/fonts/Alegreya-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0FA335000E1C415C8321AC59 /* Alegreya-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Alegreya-BlackItalic.ttf"; path = "../assets/fonts/Alegreya-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1DB406C302964C9CBB0CC8D7 /* Alegreya-Bold.ttf */ = {isa = PBXFileReference; name = "Alegreya-Bold.ttf"; path = "../assets/fonts/Alegreya-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E424E33C51834B8A848540BB /* Alegreya-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Alegreya-BoldItalic.ttf"; path = "../assets/fonts/Alegreya-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		184B6D1CEE914C9BB99E196A /* Alegreya-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Alegreya-ExtraBold.ttf"; path = "../assets/fonts/Alegreya-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D9242051B3D34413AAC47BA8 /* Alegreya-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Alegreya-ExtraBoldItalic.ttf"; path = "../assets/fonts/Alegreya-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		59DF22242461479C89358FF9 /* Alegreya-Italic.ttf */ = {isa = PBXFileReference; name = "Alegreya-Italic.ttf"; path = "../assets/fonts/Alegreya-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83576BA63B4E4B3E98B1E124 /* Alegreya-Medium.ttf */ = {isa = PBXFileReference; name = "Alegreya-Medium.ttf"; path = "../assets/fonts/Alegreya-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C8E91BF893543A4810E32CB /* Alegreya-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Alegreya-MediumItalic.ttf"; path = "../assets/fonts/Alegreya-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2FF8B243514843048DA9F0F8 /* Alegreya-Regular.ttf */ = {isa = PBXFileReference; name = "Alegreya-Regular.ttf"; path = "../assets/fonts/Alegreya-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -896,6 +916,16 @@
 				9D0D83911E02408EAF671CAD /* Philosopher-BoldItalic.ttf */,
 				7CD90EF4228D4077978C9A64 /* Philosopher-Italic.ttf */,
 				77539208F46C44F9B9CEA2CB /* Philosopher-Regular.ttf */,
+				DED187E0EB3C4AB2963DD872 /* Alegreya-Black.ttf */,
+				0FA335000E1C415C8321AC59 /* Alegreya-BlackItalic.ttf */,
+				1DB406C302964C9CBB0CC8D7 /* Alegreya-Bold.ttf */,
+				E424E33C51834B8A848540BB /* Alegreya-BoldItalic.ttf */,
+				184B6D1CEE914C9BB99E196A /* Alegreya-ExtraBold.ttf */,
+				D9242051B3D34413AAC47BA8 /* Alegreya-ExtraBoldItalic.ttf */,
+				59DF22242461479C89358FF9 /* Alegreya-Italic.ttf */,
+				83576BA63B4E4B3E98B1E124 /* Alegreya-Medium.ttf */,
+				7C8E91BF893543A4810E32CB /* Alegreya-MediumItalic.ttf */,
+				2FF8B243514843048DA9F0F8 /* Alegreya-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1440,6 +1470,16 @@
 				3FF0AE86D5184D098C983CAE /* Philosopher-BoldItalic.ttf in Resources */,
 				391CCAB211D747ACAF0D0573 /* Philosopher-Italic.ttf in Resources */,
 				28510E9B244F4DCBA0B38BBE /* Philosopher-Regular.ttf in Resources */,
+				BF41A1F792E846D48A6F392C /* Alegreya-Black.ttf in Resources */,
+				668A809361364CA3BB4BB519 /* Alegreya-BlackItalic.ttf in Resources */,
+				4A6B1C6B53E94CDFBB9DD382 /* Alegreya-Bold.ttf in Resources */,
+				620119F55A3D4D9A90D8C3D6 /* Alegreya-BoldItalic.ttf in Resources */,
+				F324AB7D0573452ABF7BD3BE /* Alegreya-ExtraBold.ttf in Resources */,
+				32F45D5F1BA4490290065450 /* Alegreya-ExtraBoldItalic.ttf in Resources */,
+				E4A741D9CF644C4991D172D9 /* Alegreya-Italic.ttf in Resources */,
+				53D092E07FBF4670926034DA /* Alegreya-Medium.ttf in Resources */,
+				03404F50DE2E46EF811ABAB3 /* Alegreya-MediumItalic.ttf in Resources */,
+				40C5CF01E5984363A1773DA4 /* Alegreya-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
